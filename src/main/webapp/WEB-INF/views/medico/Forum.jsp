@@ -87,7 +87,7 @@
                             <h3>${postsForum.tituloForum}  </h3>
                             <hr>
                             <h4>${postsForum.textoForum}</h4>
-                            <p align="right"><a href="#" style="color: black">responder</a></p>
+                            <p align="right"><a href="redRespForum?id=${postsForum.id}" style="color: black">responder</a></p>
                         </div>
                     </c:forEach>
 				</div>

@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html lang="pt">
+    <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <!DOCTYPE html>
+    <html lang="pt">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,106 +14,129 @@
         <link href="resources/css/sb-admin.css" rel="stylesheet">
         <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
     </head>
 
     <body>
-    <jsp:useBean id="log1" class="br.csi.dao.ForumMedicoDao" />
-	<c:set var="post" value="${log1.getPosts()}" />
 
-        <div id="wrapper">
 
-            <!-- Sidebar -->
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="RedMedico">LabMed</a>
+    <jsp:useBean id="log9" class="br.csi.dao.ForumMedicoDao" />
+    <c:set var="resps" value="${log9.getRespsForum()}" />
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="RedMedico">LabMed</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
+                    <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="RedForum">Médicos</a></li>
+                            <li><a href="#">Geral</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right navbar-user">
+                    <li class="dropdown user-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
+                            <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
+                            <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
+                            <li class="divider"></li>
+                            <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+
+                <div class="jumbotron" style="padding-top: 1px">
+                    <h2 align="center"><u>Forum Medico</u></h2>
+                    <br>
+                    <br><br>
+
+                        <div class="thumbnail">
+                            <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
+                            <h3>${forum.tituloForum }</h3>
+                            <hr>
+                            <h4>${forum.textoForum}</h4>
+                            <br>
+                            <hr>
+                            <p align="center"><u>respostas</u></p>
+                            <p align="right">texto texto texto texto texto texto texto texto texto texto texto texto texto </p>
+                            <c:forEach var="respsForum" items="${respsForum}">
+                                <div class="thumbnail">
+                                    <input type="hidden" name="idusuario" value="${resps.idusuario }">
+                                    <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
+                                    <h3>${resps.comentarioforummedico}  </h3>
+                                    <hr>
+                                </div>
+                            </c:forEach>
+                        </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    </div><!-- /#page-wrapper -->
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
-                        <li><a href="Mural.jsp"><i class="fa fa-edit"></i> Mural</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="RedForum">Médicos</a></li>
-                                <li><a href="#">Geral</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right navbar-user">
-                        <li class="dropdown user-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Filipe Duarte <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                        <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
-                        		<li><a href="RedPerfil"><i class="fa fa-user"></i> Perfil </a></li>  
-                                <li class="divider"></li>
-                                <li><a href="Login.jsp"><i class="fa fa-power-off"></i> Log Out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </nav>
-
-            <div id="page-wrapper">
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ol class="breadcrumb">
-                            <li class="active"><i class="fa fa-dashboard"></i> Home</li>
-                        </ol>
-                    </div>
+    <!--modal cadastra novo post no forum do medico inicio-->
+    <div class="modal fade" id="modalcadformed" tabindex="-1" role="dialog" aria-labelledby="myModalcadformed">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalcadformed">Cadastrar</h4>
                 </div>
-                <!-- /.row -->
+                <div class="modal-body">
+                    <form action="CadastrarForumMedico" method="post">
+                        <input type="hidden" name="idusuario" value="${usuario.id}">
+
+                        <label>Titulo:</label>
+                        <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
+
+                        <label>Texto:</label>
+                        <textarea class="form-control" rows="5" name="textoForum" placeholder="texto"></textarea>
+                        <hr>
+                        <button type="submit" class="btn btn-primary pull-right">Cadastrar</button><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal cadastra novo post no forum do medico fim-->
 
 
-            </div><!-- /#wrapper -->
+    <!-- JavaScript -->
+    <script src="resources/js/jquery-1.10.2.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="resources/js/morris/chart-data-morris.js"></script>
+    <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="resources/js/tablesorter/tables.js"></script>
 
-		<div id="page-wrapper">
-			<div class="row">
-
-				<div class="jumbotron">
-										
-					<c:forEach var="post" items="${post}">
-					<div class="thumbnail">
-						<p>
-						<h3>
-							<b>${post.tituloForum}</b>
-						</h3>
-						</p>
-						<hr>
-						<p>${post.textoForum}.</p>
-							<p align="right"> <a href="#" style="color: black"> Responder </a> </p>
-					</div>
-					</c:forEach>
-					<h1>Respostas aqui</h1>
-
-				</div>
-
-			</div>
-		</div>
-		<!-- /.row -->
-	</div><!-- /#page-wrapper -->
-
-
-<!-- JavaScript -->
-<script src="resources/js/jquery-1.10.2.js"></script>
-<script src="resources/js/bootstrap.js"></script>
-
-<!-- Page Specific Plugins -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-<script src="resources/js/morris/chart-data-morris.js"></script>
-<script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
-<script src="resources/js/tablesorter/tables.js"></script>
-
-</body>
-</html>
+    </body>
+    </html>

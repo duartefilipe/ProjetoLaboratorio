@@ -2,14 +2,16 @@ package br.csi.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import br.csi.model.ComentarioMedico;
+import br.csi.model.ForumMedico;
 import br.csi.util.Connect;
 
 
 public class ComentarioMedicoDao {
-	
+	/*
 	public boolean cadastraComentarioMedico(ComentarioMedico cm) throws SQLException{
 		Connection c = null;
 		PreparedStatement stmt = null;
@@ -35,5 +37,7 @@ public class ComentarioMedicoDao {
 		}
 		return retorno;
 	}
+	*/
+
 
 }

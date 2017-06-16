@@ -5,7 +5,11 @@ import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import br.csi.dao.ComentarioMedicoDao;
 import br.csi.dao.EmailDao;
+import br.csi.dao.ForumMedicoDao;
+import br.csi.model.ComentarioMedico;
+import br.csi.model.ForumMedico;
 import br.csi.util.Mail;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -118,6 +122,22 @@ public class RedirectController {
 
 		rq.setAttribute("usuario", u);
 		return "usuario/PerfilUsu";
+	}
+
+	@RequestMapping ("redRespForum")
+	public String redirectRespForumMedico(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+
+		int id = Integer.parseInt(rq.getParameter("id"));
+
+		System.out.println("AQUI NO REDIRECT forum "+id);
+
+		ForumMedico fm = new ForumMedico();
+		ForumMedicoDao cmD = new ForumMedicoDao();
+
+		fm = cmD.pesquisaForumMedico(id);
+
+		rq.setAttribute("forum", fm);
+		return "medico/ForumRespostas";
 	}
 
 	/* mandar email inicio */

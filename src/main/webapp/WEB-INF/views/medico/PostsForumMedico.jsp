@@ -24,8 +24,8 @@
 <body>
 <c:out value="${requestScope.usuario}" />
 
-<jsp:useBean id="log4" class="br.csi.dao.MuralDao" />
-<c:set var="posts" value="${log4.getPostsMural2(usuario.id)}" />
+<jsp:useBean id="logposts2" class="br.csi.dao.ForumMedicoDao" />
+<c:set var="postsforum" value="${logposts2.getPostsForum2(usuario.id)}" />
 
 <div id="wrapper">
 
@@ -87,14 +87,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="posts" items="${posts}">
+                    <c:forEach var="postsforum" items="${postsforum}">
                         <tr>
-                            <input type="hidden" name="idMural" value="${posts.idMural}">
-                            <td>${posts.titulo}</td>
-                            <td>${posts.texto}</td>
+                            <input type="hidden" name="id" value="${postsforum.id}">
+                            <td>${postsforum.tituloForum}</td>
+                            <td>${postsforum.textoForum}</td>
                             <!--<td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><img src="resources/images/alterar.jpg" style="width: 150; height: 30px;" /></a></td>-->
-                            <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-undo" style="color: black"></i></a></td>
-                            <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
+                            <td><a href="RemoverPostForumMedico?id=${postsforum.id}"><i class="fa fa-undo" style="color: black"></i></a></td>
+                            <td align="center"><a href="RemoverPostForumMedico?id=${postsforum.id}"><i class="fa fa-remove" style="color: black"></i></a></td>
                             <!--<td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><img src="resources/images/excluir.png" style="width: 150; height: 30px;" /></a></td>-->
 
                         </tr>

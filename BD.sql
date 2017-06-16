@@ -23,6 +23,22 @@ create table forummedico (idforummedico serial not null primary key,
                          idusuario int, titulo text, texto text,
                          foreign key (idusuario) references usuario (idusuario));
 
+create table comentarioforummedico (idcomentarioforummedico serial not null primary key,
+                                   comentario text, idpostforummedico int, idusuario int,
+                                   foreign key (idusuario) references usuario(idusuario),
+                                   foreign key (idpostforummedico) references forummedico (idforummedico));
+
+
+select*from usuario
+select*from comentarioforummedico
+insert into comentarioforummedico values (3, 'tetettetetetete', 12, 1);
+
+select idpostforummedico, idcomentarioforummedico, titulo, texto, nome, comentario
+	from comentarioforummedico, usuario, forummedico
+		where comentarioforummedico.idusuario = usuario.idusuario
+        	and comentarioforummedico.idpostforummedico = forummedico.idforummedico
+			and idforummedico = 14
+
 
 
 select*from usuario;
