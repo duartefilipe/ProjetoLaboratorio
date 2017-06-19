@@ -17,8 +17,10 @@
     </head>
 
     <body>
-    <jsp:useBean id="log1" class="br.csi.dao.ForumMedicoDao" />
-	<c:set var="postForum" value="${log1.getPostsForum()}" />
+    <c:out value="${requestScope.usuario}" />
+
+    <jsp:useBean id="logpostsgeral" class="br.csi.dao.ForumMedicoDao" />
+    <c:set var="postsForum" value="${logpostsgeral.getPostsForumGeral()}" />
 
         <div id="wrapper">
 
@@ -61,27 +63,53 @@
 		<div id="page-wrapper">
 			<div class="row">
 
-				<div class="jumbotron" style="padding-top: 1px">
+                <div class="jumbotron" style="padding-top: 1px">
                     <h2 align="center"><u>Forum</u></h2>
-										
-					<c:forEach var="postForum" items="${postForum}">
-					<div class="thumbnail">
-                        <input type="hidden" name="postForum" value="${postForum.id }">
-						<p>
-						<h3>
-							<b> ${postForum.tituloForum}</b>
-						</h3>
-						</p>
-						<hr>
-						<p>${postForum.textoForum}.</p>
-							<p align="right"> <a href="#" style="color: black"> Responder </a> </p>
-					</div>
-					</c:forEach>
+                    <br>
+                    <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
+                    <br><br>
+
+                    <c:forEach var="postsForum" items="${postsForum}">
+                        <div class="thumbnail">
+                            <input type="hidden" name="idusuario" value="${postsForum.idusuario }">
+                            <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
+                            <h3>${postsForum.tituloForum}  </h3>
+                            <hr>
+                            <h4>${postsForum.textoForum}</h4>
+                            <p align="right"><a href="redRespForumUsu?id=${postsForum.id}" style="color: black">responder</a></p>
+                        </div>
+                    </c:forEach>
 				</div>
             </div>
 		</div>
     </div>
 	</div><!-- /#page-wrapper -->
+
+    <!--modal cadastra novo post no forum do usuario inicio-->
+    <div class="modal fade" id="modalcadformed" tabindex="-1" role="dialog" aria-labelledby="myModalcadformed">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalcadformed">Cadastrar</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="CadastrarForumGeralUsuario" method="post">
+                        <input type="hidden" name="idusuario" value="${usuario.id}">
+                        <input type="hidden" name="tipo" value="usuario">
+                        <label>Titulo:</label>
+                        <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
+
+                        <label>Texto:</label>
+                        <textarea class="form-control" rows="5" name="textoForum" placeholder="texto"></textarea>
+                        <hr>
+                        <button type="submit" class="btn btn-primary pull-right">Cadastrar</button><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal cadastra novo post no forum do usuario fim-->
 
 
 <!-- JavaScript -->

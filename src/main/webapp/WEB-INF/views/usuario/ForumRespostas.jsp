@@ -36,30 +36,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="RedMedico">LabMed</a>
+                <a class="navbar-brand" href="RedUsu">LabMed</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
-                    <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="RedForum">Médicos</a></li>
-                            <li><a href="RedForumGeral">Geral</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
+                    <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
+                    <li><a href="RedForumUsu">Forum</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown user-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                            <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                            <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
+                            <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
+                            <li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
+                            <li><a href="RedMuralUsuario"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
                             <li class="divider"></li>
                             <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                         </ul>
@@ -102,32 +96,6 @@
     </div>
     </div><!-- /#page-wrapper -->
 
-    <!--modal cadastra novo post no forum do medico inicio-->
-    <div class="modal fade" id="modalcadformed" tabindex="-1" role="dialog" aria-labelledby="myModalcadformed">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalcadformed">Cadastrar</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="CadastrarForumMedico" method="post">
-                        <input type="hidden" name="idusuario" value="${usuario.id}">
-
-                        <label>Titulo:</label>
-                        <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
-
-                        <label>Texto:</label>
-                        <textarea class="form-control" rows="5" name="textoForum" placeholder="texto"></textarea>
-                        <hr>
-                        <button type="submit" class="btn btn-primary pull-right">Cadastrar</button><br>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--modal cadastra novo post no forum do medico fim-->
-
     <!--modal novo comentario no post no forum do medico inicio-->
     <div class="modal fade" id="modalcadcoment" tabindex="-1" role="dialog" aria-labelledby="myModalcadcomentmed">
         <div class="modal-dialog" role="document">
@@ -137,7 +105,7 @@
                     <h4 class="modal-title" id="myModalcadcomentmed">Comentar</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="CadastrarComentForumMedico" method="post">
+                    <form action="CadastrarComentForumUsuario" method="post">
                         <input type="hidden" name="idusuario" value="${usuario.id}">
                         <input type="hidden" name="idpostforummedico" value="${forum.id}">
 

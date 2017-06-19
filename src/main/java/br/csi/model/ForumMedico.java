@@ -5,6 +5,15 @@ public class ForumMedico {
 	private int idusuario;
 	private String textoForum;
 	private String tituloForum;
+	private String tipo;
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 
 	public int getId() {
 		return id;

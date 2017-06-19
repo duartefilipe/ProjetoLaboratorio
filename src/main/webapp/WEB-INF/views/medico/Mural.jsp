@@ -46,7 +46,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="RedForum">Médicos</a></li>
-                        <li><a href="#">Geral</a></li>
+                        <li><a href="RedForumGeral">Geral</a></li>
                     </ul>
                 </li>
             </ul>

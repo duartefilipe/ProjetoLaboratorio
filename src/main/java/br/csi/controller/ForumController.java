@@ -24,6 +24,26 @@ public class ForumController {
 		}
 	}
 
+	@RequestMapping ("CadastrarForumGeralMedico")
+	public String cadastraForumGeralMedico (ForumMedico forummedico) throws ClassNotFoundException, SQLException{
+		boolean retorno = new ForumMedicoDao().CadastrarForumMedico(forummedico);
+		if(retorno){
+			return "medico/ForumGeral";
+		}else{
+			return "medico/ForumGeral";
+		}
+	}
+
+	@RequestMapping ("CadastrarForumGeralUsuario")
+	public String cadastraForumGeralUsuario (ForumMedico forummedico) throws ClassNotFoundException, SQLException{
+		boolean retorno = new ForumMedicoDao().CadastrarForumMedico(forummedico);
+		if(retorno){
+			return "usuario/Forum";
+		}else{
+			return "usuario/Forum";
+		}
+	}
+
 	@RequestMapping ("CadastrarComentForumMedico")
 	public String cadastraComentarioForumMedico (ComentarioMedico cm) throws ClassNotFoundException, SQLException{
 		boolean retorno = new ForumMedicoDao().CadastrarComentForumMedico(cm);
@@ -31,6 +51,16 @@ public class ForumController {
 			return "medico/Forum";
 		}else{
 			return "medico/Forum";
+		}
+	}
+
+	@RequestMapping ("CadastrarComentForumUsuario")
+	public String cadastraComentarioForumUsuario (ComentarioMedico cm) throws ClassNotFoundException, SQLException{
+		boolean retorno = new ForumMedicoDao().CadastrarComentForumMedico(cm);
+		if(retorno){
+			return "usuario/Forum";
+		}else{
+			return "usuario/Forum";
 		}
 	}
 
@@ -44,7 +74,7 @@ public class ForumController {
 
 		boolean retorno = fmD.RemoverPostForumMedico(id);
 		if(retorno){
-			rq.setAttribute("postsforum", fmD.getPostsForum());
+			rq.setAttribute("postsforum", fmD.getPostsForumMedico());
 			return "medico/PostsForumMedico";
 		}else{
 			rq.setAttribute("msg","roblema pra excluir");

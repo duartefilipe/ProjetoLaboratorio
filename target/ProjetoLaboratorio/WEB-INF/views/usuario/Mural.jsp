@@ -117,7 +117,7 @@
                 <h4 class="modal-title" id="myModalcadmur">Cadastrar</h4>
             </div>
             <div class="modal-body">
-                <form action="CadastrarMural" method="post">
+                <form action="CadastrarMuralUsu" method="post">
                     <input type="hidden" name="idUsuario" value="${usuario.id }">
 
                     <label>Titulo:</label>

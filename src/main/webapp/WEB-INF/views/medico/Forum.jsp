@@ -25,7 +25,7 @@
 <c:out value="${requestScope.usuario}" />
 
 <jsp:useBean id="logposts" class="br.csi.dao.ForumMedicoDao" />
-<c:set var="postsForum" value="${logposts.getPostsForum()}" />
+<c:set var="postsForum" value="${logposts.getPostsForumMedico()}" />
 
 <div id="wrapper">
 
@@ -51,7 +51,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="RedForum">Médicos</a></li>
-                        <li><a href="#">Geral</a></li>
+                        <li><a href="RedForumGeral">Geral</a></li>
                     </ul>
                 </li>
             </ul>
@@ -75,7 +75,7 @@
 			<div class="row">
 
 				<div class="jumbotron" style="padding-top: 1px">
-                    <h2 align="center"><u>Forum Medico</u></h2>
+                    <h2 align="center"><u>Forum dos Medico</u></h2>
                     <br>
                     <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
                     <br><br>
@@ -107,7 +107,7 @@
             <div class="modal-body">
                 <form action="CadastrarForumMedico" method="post">
                     <input type="hidden" name="idusuario" value="${usuario.id}">
-
+                    <input type="hidden" name="tipo" value="medico">
                     <label>Titulo:</label>
                     <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
 

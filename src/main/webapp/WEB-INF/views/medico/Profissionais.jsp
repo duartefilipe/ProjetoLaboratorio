@@ -60,7 +60,7 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="RedForum">Médicos</a></li>
-							<li><a href="#">Geral</a></li>
+							<li><a href="RedForumGeralRedForumGeral">Geral</a></li>
 						</ul></li>
 				</ul>
 
@@ -79,6 +79,8 @@
 			</div>
 			<!-- /.navbar-collapse -->
 		</nav>
+
+
 
 		<div id="page-wrapper">
 			<div class="row">

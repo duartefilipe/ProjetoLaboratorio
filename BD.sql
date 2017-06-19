@@ -20,7 +20,7 @@ create table avaliacao (idavaliacao serial not null primary key,
                       foreign key (idusurec) references usuario (idusuario));
 
 create table forummedico (idforummedico serial not null primary key,
-                         idusuario int, titulo text, texto text,
+                         idusuario int, titulo text, texto text, tipo varchar(50),
                          foreign key (idusuario) references usuario (idusuario));
 
 create table comentarioforummedico (idcomentarioforummedico serial not null primary key,

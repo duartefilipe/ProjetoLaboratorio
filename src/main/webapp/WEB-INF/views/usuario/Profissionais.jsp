@@ -110,7 +110,7 @@
 								<td>${usuarios.trabant}</td>
 								<td>5</td>
 								<td align="center">
-									<form action="CadastrarFavorito" method="post">
+									<form action="CadastrarFavoritoUsu" method="post">
 										<input type="hidden" name="idusuario2" value="${usuarios.id }">
 										<!--	<img href="#" src="resources/images/adiciona.png" style="width: 150; height: 30px;" />  -->
 										<button type="submit" class="">

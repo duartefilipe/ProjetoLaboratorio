@@ -135,7 +135,7 @@
 
                     </c:forEach>
 
-                    <p align="right"> <a href="RedMural"> ver mais </a> </p>
+                    <p align="right"> <a href="RedMuralUsu"> ver mais </a> </p>
                 </div>
 
             </div>

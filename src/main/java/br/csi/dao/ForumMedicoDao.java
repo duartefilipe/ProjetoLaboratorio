@@ -23,11 +23,12 @@ public class ForumMedicoDao {
 
 		try {
 			c = Connect.getConexao();
-			String sql="INSERT INTO forummedico (idusuario, titulo, texto) values(?,?,?)";
+			String sql="INSERT INTO forummedico (idusuario, titulo, texto, tipo) values(?,?,?,?)";
 			stmt = c.prepareStatement(sql);
 			stmt.setInt(1, fm.getIdusuario());
 			stmt.setString(2, fm.getTituloForum());
 			stmt.setString(3,fm.getTextoForum());
+			stmt.setString(4, fm.getTipo());
 			stmt.execute();
 			stmt.close();
 			retorno = true;
@@ -37,6 +38,8 @@ public class ForumMedicoDao {
 		}
 		return retorno;
 	}
+
+
 
 	public boolean CadastrarComentForumMedico(ComentarioMedico cm) throws SQLException {
 		Connection c = null;
@@ -50,11 +53,11 @@ public class ForumMedicoDao {
 			stmt = c.prepareStatement(sql);
 
 			stmt.setString(1, cm.getComentarioforummedico());
-				System.out.println("comentario que vai cadastrar: "+cm.getComentarioforummedico());
+			System.out.println("comentario que vai cadastrar: "+cm.getComentarioforummedico());
 			stmt.setInt(2, cm.getIdpostforummedico());
-				System.out.println("idpostforummedico que vai cadastrar: "+cm.getIdpostforummedico());
+			System.out.println("idpostforummedico que vai cadastrar: "+cm.getIdpostforummedico());
 			stmt.setInt(3, cm.getIdusuario());
-				System.out.println("idusuario que vai cadastrar: "+cm.getIdusuario());
+			System.out.println("idusuario que vai cadastrar: "+cm.getIdusuario());
 
 			stmt.execute();
 			stmt.close();
@@ -65,15 +68,15 @@ public class ForumMedicoDao {
 		}
 		return retorno;
 	}
-	
-	public ArrayList<ForumMedico> getPostsForum() throws ClassNotFoundException {
+
+	public ArrayList<ForumMedico> getPostsForumMedico() throws ClassNotFoundException {
 
 		ArrayList<ForumMedico> logposts = new ArrayList<ForumMedico>();
 		Connection con = Connect.getConexao();
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico ORDER BY idforummedico DESC";
+			String sql = "SELECT * FROM forummedico where tipo = 'medico' ORDER BY idforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 
@@ -97,8 +100,34 @@ public class ForumMedicoDao {
 		return logposts;
 	}
 
-	public ArrayList<ComentarioMedico> getPostsForum2(int id) throws ClassNotFoundException {
+	public ArrayList<ForumMedico> getPostsForumGeral() throws ClassNotFoundException {
 
+		ArrayList<ForumMedico> logpostsgeral = new ArrayList<ForumMedico>();
+		Connection con = Connect.getConexao();
+		ForumMedico fm = null;
+
+		try {
+			String sql = "SELECT * FROM forummedico where tipo = 'usuario' ORDER BY idforummedico DESC";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				fm = new ForumMedico();
+				fm.setId(rs.getInt("idforummedico"));
+				fm.setIdusuario(rs.getInt("idusuario"));
+				fm.setTituloForum(rs.getString("titulo"));
+				fm.setTextoForum(rs.getString("texto"));
+				logpostsgeral.add(fm);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return logpostsgeral;
+	}
+
+	public ArrayList<ComentarioMedico> getPostsForum2(int id) throws ClassNotFoundException {
+		//mostra os comentarios dos posts
 		ArrayList<ComentarioMedico> logpostsforum2 = new ArrayList<ComentarioMedico>();
 		Connection con = Connect.getConexao();
 		ComentarioMedico cfm = null;
@@ -117,22 +146,22 @@ public class ForumMedicoDao {
 			while (rs.next()) {
 				cfm = new ComentarioMedico();
 				cfm.setIdpostforummedico(rs.getInt("idpostforummedico"));
-					System.out.println("id do post do forum do medico: " +cfm.getIdpostforummedico());
+				System.out.println("id do post do forum do medico: " +cfm.getIdpostforummedico());
 
 				cfm.setIdcomentarioforummedico(rs.getInt("idcomentarioforummedico"));
-					System.out.println("id do comentario do post do forum: " +cfm.getComentarioforummedico());
+				System.out.println("id do comentario do post do forum: " +cfm.getComentarioforummedico());
 
 				cfm.setIdusuario(rs.getInt("idusuario"));
-					System.out.println("id do usuario que comentou: "+cfm.getIdusuario());
+				System.out.println("id do usuario que comentou: "+cfm.getIdusuario());
 
 				cfm.setTitulocomentario(rs.getString("titulo"));
-					System.out.println("titulo do post comentado: "+cfm.getTitulocomentario());
+				System.out.println("titulo do post comentado: "+cfm.getTitulocomentario());
 
 				cfm.setTextocomentario(rs.getString("texto"));
 				System.out.println("texto do post comentado: "+cfm.getTextocomentario());
 
 				cfm.setComentarioforummedico(rs.getString("comentario"));
-					System.out.println("comentario no array list: "+cfm.getComentarioforummedico());
+				System.out.println("comentario no array list: "+cfm.getComentarioforummedico());
 
 				logpostsforum2.add(cfm);
 
@@ -144,41 +173,36 @@ public class ForumMedicoDao {
 		return logpostsforum2;
 	}
 
-/*
-	public ArrayList<ComentarioMedico> getRespsForum() throws ClassNotFoundException {
-
-		ArrayList<ComentarioMedico> log9 = new ArrayList<ComentarioMedico>();
-		Connection con = Connect.getConexao();
-		ComentarioMedico cfm = null;
-
-		try {
-			//String sql = "SELECT * FROM mural ORDER BY idmural DESC ";
-			String sql = "select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuario, titulo, texto, comentario \\n\" +\n" +
-					"from comentarioforummedico, usuario, forummedico " +
-					"where comentarioforummedico.idusuario = usuario.idusuario" +
-					"and comentarioforummedico.idpostforummedico = forummedico.idforummedico" +
-					" ORDER BY idforummedico DESC";
-			PreparedStatement stmt = con.prepareStatement(sql);
-			ResultSet rs = stmt.executeQuery();
-
-			while (rs.next()) {
-				cfm = new ComentarioMedico();
-				cfm.setIdpostforummedico(rs.getInt("idpostforummedico"));
-				cfm.setIdcomentarioforummedico(rs.getInt("idcomentarioforummedico"));
-				cfm.setIdusuario(rs.getInt("idusuario"));
-				cfm.setTitulocomentario(rs.getString("titulo"));
-				cfm.setTextocomentario(rs.getString("texto"));
-				cfm.setComentarioforummedico(rs.getString("comentario"));
-				log9.add(cfm);
-
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return log9;
-	}
-*/
+	/*
+        public ArrayList<ComentarioMedico> getRespsForum() throws ClassNotFoundException {
+            ArrayList<ComentarioMedico> log9 = new ArrayList<ComentarioMedico>();
+            Connection con = Connect.getConexao();
+            ComentarioMedico cfm = null;
+            try {
+                //String sql = "SELECT * FROM mural ORDER BY idmural DESC ";
+                String sql = "select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuario, titulo, texto, comentario \\n\" +\n" +
+                        "from comentarioforummedico, usuario, forummedico " +
+                        "where comentarioforummedico.idusuario = usuario.idusuario" +
+                        "and comentarioforummedico.idpostforummedico = forummedico.idforummedico" +
+                        " ORDER BY idforummedico DESC";
+                PreparedStatement stmt = con.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery();
+                while (rs.next()) {
+                    cfm = new ComentarioMedico();
+                    cfm.setIdpostforummedico(rs.getInt("idpostforummedico"));
+                    cfm.setIdcomentarioforummedico(rs.getInt("idcomentarioforummedico"));
+                    cfm.setIdusuario(rs.getInt("idusuario"));
+                    cfm.setTitulocomentario(rs.getString("titulo"));
+                    cfm.setTextocomentario(rs.getString("texto"));
+                    cfm.setComentarioforummedico(rs.getString("comentario"));
+                    log9.add(cfm);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return log9;
+        }
+    */
 	public boolean RemoverPostForumMedico(int id) throws SQLException, Exception {
 		boolean deletar = false;
 		Connection c = null;

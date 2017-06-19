@@ -57,6 +57,11 @@ public class RedirectController {
 		return "medico/Forum";
 	}
 
+	@RequestMapping("RedForumGeral")
+	public String redirectForumGeral(HttpServletRequest rq) throws ClassNotFoundException{
+		return "medico/ForumGeral";
+	}
+
 	@RequestMapping("RedPostsForumMedico")
 	public String redirectPostsForumMedico(HttpServletRequest rq) throws ClassNotFoundException{
 		return "medico/PostsForumMedico";
@@ -124,7 +129,6 @@ public class RedirectController {
 		return "usuario/PerfilUsu";
 	}
 
-	//depois tirar isso que nao vou precisar
 	@RequestMapping ("redRespForum")
 	public String redirectRespForumMedico(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
 
@@ -139,6 +143,20 @@ public class RedirectController {
 
 		rq.setAttribute("forum", fm);
 		return "medico/ForumRespostas";
+	}
+
+	@RequestMapping ("redRespForumUsu")
+	public String redirectRespForumUsuario(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+
+		int id = Integer.parseInt(rq.getParameter("id"));
+
+		ForumMedico fm = new ForumMedico();
+		ForumMedicoDao cmD = new ForumMedicoDao();
+
+		fm = cmD.pesquisaForumMedico(id);
+
+		rq.setAttribute("forum", fm);
+		return "usuario/ForumRespostas";
 	}
 
 	/* mandar email inicio */
