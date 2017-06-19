@@ -124,6 +124,7 @@ public class RedirectController {
 		return "usuario/PerfilUsu";
 	}
 
+	//depois tirar isso que nao vou precisar
 	@RequestMapping ("redRespForum")
 	public String redirectRespForumMedico(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
 

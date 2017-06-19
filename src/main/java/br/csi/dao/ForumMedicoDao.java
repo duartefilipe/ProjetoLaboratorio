@@ -37,6 +37,34 @@ public class ForumMedicoDao {
 		}
 		return retorno;
 	}
+
+	public boolean CadastrarComentForumMedico(ComentarioMedico cm) throws SQLException {
+		Connection c = null;
+		PreparedStatement stmt = null;
+		boolean retorno = false;
+		System.out.println("no cadastra comentario medico");
+
+		try {
+			c = Connect.getConexao();
+			String sql="INSERT INTO comentarioforummedico (comentario, idpostforummedico, idusuario) values (?,?,?)";
+			stmt = c.prepareStatement(sql);
+
+			stmt.setString(1, cm.getComentarioforummedico());
+				System.out.println("comentario que vai cadastrar: "+cm.getComentarioforummedico());
+			stmt.setInt(2, cm.getIdpostforummedico());
+				System.out.println("idpostforummedico que vai cadastrar: "+cm.getIdpostforummedico());
+			stmt.setInt(3, cm.getIdusuario());
+				System.out.println("idusuario que vai cadastrar: "+cm.getIdusuario());
+
+			stmt.execute();
+			stmt.close();
+			retorno = true;
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return retorno;
+		}
+		return retorno;
+	}
 	
 	public ArrayList<ForumMedico> getPostsForum() throws ClassNotFoundException {
 
@@ -104,7 +132,7 @@ public class ForumMedicoDao {
 				System.out.println("texto do post comentado: "+cfm.getTextocomentario());
 
 				cfm.setComentarioforummedico(rs.getString("comentario"));
-					System.out.println("comentario: "+cfm.getComentarioforummedico());
+					System.out.println("comentario no array list: "+cfm.getComentarioforummedico());
 
 				logpostsforum2.add(cfm);
 
@@ -166,6 +194,8 @@ public class ForumMedicoDao {
 
 		return deletar;
 	}
+
+
 
 	public ForumMedico pesquisaForumMedico(int id ) throws ClassNotFoundException, SQLException{
 

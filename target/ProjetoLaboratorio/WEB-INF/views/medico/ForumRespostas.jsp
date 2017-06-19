@@ -85,7 +85,7 @@
                             <br>
                             <hr>
                             <p align="center"><u>respostas</u></p>
-                            <p align="left"> Responder</p>
+                            <p align="left"> <a href="" style="color: black" data-toggle="modal" data-target="#modalcadcoment"> Responder </a></p>
                             <c:forEach var="respsForum" items="${respsForum}">
                                 <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
@@ -127,6 +127,32 @@
         </div>
     </div>
     <!--modal cadastra novo post no forum do medico fim-->
+
+    <!--modal novo comentario no post no forum do medico inicio-->
+    <div class="modal fade" id="modalcadcoment" tabindex="-1" role="dialog" aria-labelledby="myModalcadcomentmed">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalcadcomentmed">Comentar</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="CadastrarComentForumMedico" method="post">
+
+                        <label>Comentario:</label>
+                        <textarea class="form-control" rows="5" name="comentario" placeholder="Digite o seu comentario"></textarea>
+
+                        <input type="hidden" name="idusuario" value="${usuario.id}">
+                        <input type="hidden" name="idpostforummedico" value="${forum.id}">
+
+                        <hr>
+                        <button type="submit" class="btn btn-primary pull-right">Comentar</button><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal novo comentario no post no forum do medico fim-->
 
 
     <!-- JavaScript -->

@@ -1,7 +1,9 @@
 package br.csi.controller;
 
 import br.csi.dao.FavoritoDao;
+import br.csi.dao.ForumMedicoDao;
 import br.csi.dao.MuralDao;
+import br.csi.model.ForumMedico;
 import br.csi.model.Mural;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,8 @@ public class MuralController {
             return "medico/Mural";
         }
     }
+
+
 
     @RequestMapping("RemoverMuralMedico")
     public String DeletaMuralMedico(int idMural , HttpServletRequest rq) throws SQLException, Exception{
