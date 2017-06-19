@@ -77,7 +77,7 @@
 				<div class="jumbotron" style="padding-top: 1px">
                     <h2 align="center"><u>Forum Medico</u></h2>
                     <br>
-                    <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post</button>
+                    <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
                     <br><br>
 
                     <c:forEach var="postsForum" items="${postsForum}">
