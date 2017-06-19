@@ -109,7 +109,7 @@ public class ForumMedicoDao {
 					"\tfrom comentarioforummedico, usuario, forummedico \n" +
 					"\t\twhere comentarioforummedico.idusuario = usuario.idusuario\n" +
 					"        \tand comentarioforummedico.idpostforummedico = forummedico.idforummedico\n" +
-					"\t\t\tand idforummedico = '"+id+"' ORDER BY idforummedico DESC";
+					"\t\t\tand idforummedico = '"+id+"' ORDER BY idcomentarioforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 			System.out.println("aqui no array comentarios: "+id);

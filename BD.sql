@@ -29,16 +29,17 @@ create table comentarioforummedico (idcomentarioforummedico serial not null prim
                                    foreign key (idpostforummedico) references forummedico (idforummedico));
 
 
-select*from usuario
-select*from comentarioforummedico
-insert into comentarioforummedico values (3, 'tetettetetetete', 12, 1);
-
 select idpostforummedico, idcomentarioforummedico, titulo, texto, nome, comentario
 	from comentarioforummedico, usuario, forummedico
 		where comentarioforummedico.idusuario = usuario.idusuario
         	and comentarioforummedico.idpostforummedico = forummedico.idforummedico
 			and idforummedico = 14
 
+select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuario, titulo, texto, comentario
+  from comentarioforummedico, usuario, forummedico
+	  where comentarioforummedico.idusuario = usuario.idusuario
+		  and comentarioforummedico.idpostforummedico = forummedico.idforummedico
+		  and idforummedico = '"+id+"' ORDER BY idcomentarioforummedico DESC
 
 
 select*from usuario;
