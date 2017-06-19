@@ -23,7 +23,7 @@
 
     <body>
     <jsp:useBean id="logpostsforum2" class="br.csi.dao.ForumMedicoDao" />
-    <c:set var="respsForum" value="${logpostsforum2.getPostsForum2(id)}" />
+    <c:set var="respsForum" value="${logpostsforum2.getPostsForum2(forum.id)}" />
 
     <div id="wrapper">
 
@@ -78,21 +78,23 @@
 
                         <div class="thumbnail">
                             <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
-                            <h3>${forum.tituloForum }</h3>
+
+                            <h3>${forum.tituloForum }  </h3>
                             <hr>
                             <h4>${forum.textoForum}</h4>
                             <br>
                             <hr>
                             <p align="center"><u>respostas</u></p>
-                            <p align="right">texto texto texto texto texto texto texto texto texto texto texto texto texto </p>
+                            <p align="left"> Responder</p>
                             <c:forEach var="respsForum" items="${respsForum}">
-                                <div class="thumbnail">
+                                <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
                                     <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
                                     <h3>${respsForum.comentarioforummedico}  </h3>
                                     <hr>
                                 </div>
                             </c:forEach>
+
                         </div>
                 </div>
             </div>

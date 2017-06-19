@@ -84,15 +84,30 @@ public class ForumMedicoDao {
 					"\t\t\tand idforummedico = '"+id+"' ORDER BY idforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
+			System.out.println("aqui no array comentarios: "+id);
 
 			while (rs.next()) {
 				cfm = new ComentarioMedico();
 				cfm.setIdpostforummedico(rs.getInt("idpostforummedico"));
+					System.out.println("id do post do forum do medico: " +cfm.getIdpostforummedico());
+
 				cfm.setIdcomentarioforummedico(rs.getInt("idcomentarioforummedico"));
+					System.out.println("id do comentario do post do forum: " +cfm.getComentarioforummedico());
+
 				cfm.setIdusuario(rs.getInt("idusuario"));
+					System.out.println("id do usuario que comentou: "+cfm.getIdusuario());
+
 				cfm.setTitulocomentario(rs.getString("titulo"));
+					System.out.println("titulo do post comentado: "+cfm.getTitulocomentario());
+
 				cfm.setTextocomentario(rs.getString("texto"));
+				System.out.println("texto do post comentado: "+cfm.getTextocomentario());
+
 				cfm.setComentarioforummedico(rs.getString("comentario"));
+					System.out.println("comentario: "+cfm.getComentarioforummedico());
+
+				logpostsforum2.add(cfm);
+
 			}
 
 		} catch (SQLException e) {

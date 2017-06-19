@@ -25,7 +25,7 @@
 <c:out value="${requestScope.usuario}" />
 
 <jsp:useBean id="logposts2" class="br.csi.dao.ForumMedicoDao" />
-<c:set var="postsforum" value="${logposts2.getPostsForum2(postsforum.id)}" />
+<c:set var="postsforum" value="${logposts2.getPostsForum2(usuario.id)}" />
 
 <div id="wrapper">
 
