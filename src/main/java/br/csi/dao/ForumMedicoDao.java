@@ -76,7 +76,7 @@ public class ForumMedicoDao {
 		ComentarioMedico cfm = null;
 
 		try {
-			//String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' ORDER BY idforummedico DESC ";
+			//String sql = "SELECT * FROM comentarioforummedico where comentarioforummedico = '"+id+"' ORDER BY idpostforummedico DESC ";
 			String sql = "select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuario, titulo, texto, comentario \n" +
 					"\tfrom comentarioforummedico, usuario, forummedico \n" +
 					"\t\twhere comentarioforummedico.idusuario = usuario.idusuario\n" +
@@ -135,7 +135,7 @@ public class ForumMedicoDao {
 		}
 		return log9;
 	}
-
+*/
 	public boolean RemoverPostForumMedico(int id) throws SQLException, Exception {
 		boolean deletar = false;
 		Connection c = null;
@@ -151,7 +151,7 @@ public class ForumMedicoDao {
 
 		return deletar;
 	}
-*/
+
 	public ForumMedico pesquisaForumMedico(int id ) throws ClassNotFoundException, SQLException{
 
 		ForumMedico fm = null;
