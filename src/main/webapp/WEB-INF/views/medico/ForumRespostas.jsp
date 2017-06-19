@@ -142,7 +142,7 @@
                         <input type="hidden" name="idpostforummedico" value="${forum.id}">
 
                         <label>Comentario:</label>
-                        <textarea class="form-control" rows="5" name="comentario" placeholder="Digite o seu comentario"></textarea>
+                        <textarea class="form-control" rows="5" name="comentarioforummedico" placeholder="Digite o seu comentario"></textarea>
 
                         <hr>
                         <button type="submit" class="btn btn-primary pull-right">Comentar</button><br>

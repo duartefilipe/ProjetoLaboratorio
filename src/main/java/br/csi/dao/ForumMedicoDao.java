@@ -46,7 +46,7 @@ public class ForumMedicoDao {
 
 		try {
 			c = Connect.getConexao();
-			String sql="INSERT INTO comentarioforummedico (comentario, idpostforummedico, idusuario) values (?,?,?)";
+			String sql="insert into comentarioforummedico (comentario, idpostforummedico, idusuario) values (?, ?, ?)";
 			stmt = c.prepareStatement(sql);
 
 			stmt.setString(1, cm.getComentarioforummedico());
