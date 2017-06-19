@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BD.sql" afterPath="$PROJECT_DIR$/BD.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjetoLaboratorio.iml" afterPath="$PROJECT_DIR$/ProjetoLaboratorio.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/MuralController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/MuralController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/model/ForumMedico.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/model/ForumMedico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Forum.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/MuralMedico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/MuralMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Perfil.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Forum.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Forum.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,38 +18,28 @@
       <file leaf-file-name="RedirectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="84" column="32" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="32" />
+            <state relative-caret-position="208">
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mural.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
+      <file leaf-file-name="Forum.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="119" column="47" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="47" />
+            <state relative-caret-position="608">
+              <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-560">
               <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Usuario.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="137" column="58" lean-forward="false" selection-start-line="137" selection-start-column="58" selection-end-line="137" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -121,11 +79,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/MuralController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
       </list>
     </option>
   </component>
@@ -1060,15 +1019,15 @@
       <option name="presentableId" value="Default" />
       <updated>1497892369782</updated>
       <workItem from="1497892372741" duration="651000" />
-      <workItem from="1497897746718" duration="8032000" />
+      <workItem from="1497897746718" duration="8785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8683000" />
+    <option name="totallyTimeSpent" value="9436000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="7" />
+    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1217,22 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="60" column="18" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="60" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="62" column="14" lean-forward="false" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1279,14 +1222,6 @@
             <marker date="1497892350927" expanded="true" signature="3705:3744" ph="delete from " />
             <marker date="1497892350927" expanded="true" signature="4187:4510" ph="select usuar... usuario" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="112" column="70" lean-forward="false" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,22 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="137" column="58" lean-forward="false" selection-start-line="137" selection-start-column="58" selection-end-line="137" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="84" column="32" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4604">
@@ -1372,18 +1291,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="119" column="47" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-560">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/MuralUsuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="62" column="14" lean-forward="false" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
           <folding />
         </state>
       </provider>

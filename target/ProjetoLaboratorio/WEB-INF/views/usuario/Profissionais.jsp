@@ -56,7 +56,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-							<li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
+							<li><a href="RedMuralUsu"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
 							<li class="divider"></li>
 							<li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
 						</ul>
