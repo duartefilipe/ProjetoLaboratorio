@@ -109,7 +109,7 @@
 								<td>${usuarios.cidade}</td>
 								<td>${usuarios.trabatual}</td>
 								<td>${usuarios.trabant}</td>
-								<td>5</td>
+								<td>${usuarios.nota}</td>
 								<td align="center">
 									<form action="CadastrarFavorito" method="post">
 										<input type="hidden" name="idusuario2" value="${usuarios.id }">

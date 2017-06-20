@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BD.sql" afterPath="$PROJECT_DIR$/BD.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/model/Usuario.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/model/Usuario.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,28 +22,64 @@
       <file leaf-file-name="RedirectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="352">
               <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Forum.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Forum.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+            <state relative-caret-position="848">
+              <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
+      <file leaf-file-name="BD.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsuarioDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="189" column="48" lean-forward="false" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
+              <folding>
+                <marker date="1497977345300" expanded="true" signature="457:505" ph="SELECT * FRO... usuario" />
+                <marker date="1497977345300" expanded="true" signature="2237:2312" ph="INSERT INTO usuario... " />
+                <marker date="1497977345300" expanded="true" signature="2960:3092" ph="UPDATE usuar... " />
+                <marker date="1497977345300" expanded="true" signature="3877:4009" ph="UPDATE usuar... " />
+                <marker date="1497977345300" expanded="true" signature="4852:5381" ph="select usuar... usuario" />
+                <marker date="1497977345300" expanded="true" signature="4852:5759" ph="select usuar... " />
+                <marker date="1497977345300" expanded="true" signature="4852:5760" ph="SELECT * FRO... usuario" />
+                <marker date="1497977345300" expanded="true" signature="5422:5721" ph="select usuar... usuario" />
+                <marker date="1497977345300" expanded="true" signature="5652:5720" ph="select * fro... avaliacao" />
+                <marker date="1497977345300" expanded="true" signature="6627:6668" ph="SELECT * FRO... usuario" />
+                <marker date="1497977345300" expanded="true" signature="7366:7405" ph="select * fro... usuario" />
+                <marker date="1497977345300" expanded="true" signature="8338:8377" ph="select * fro... usuario" />
+                <marker date="1497977345300" expanded="true" signature="9171:9209" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profissionais.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1536">
+              <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -64,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BD.sql" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/model/ForumMedico.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
@@ -81,10 +120,13 @@
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/MuralController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/br/csi/model/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java" />
+        <option value="$PROJECT_DIR$/BD.sql" />
       </list>
     </option>
   </component>
@@ -121,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -438,6 +479,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -711,6 +753,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -880,6 +923,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1020,11 +1069,13 @@
       <updated>1497892369782</updated>
       <workItem from="1497892372741" duration="651000" />
       <workItem from="1497897746718" duration="8785000" />
+      <workItem from="1497958077553" duration="4544000" />
+      <workItem from="1497971521000" duration="2012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9436000" />
+    <option name="totallyTimeSpent" value="15992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -1050,10 +1101,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23114754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46393442" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26136363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1080,6 +1131,66 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1093,9 +1204,9 @@
         <state relative-caret-position="3520">
           <caret line="220" column="1" lean-forward="false" selection-start-line="220" selection-start-column="1" selection-end-line="220" selection-end-column="1" />
           <folding>
-            <element signature="e#2298#2311#0" expanded="true" />
-            <element signature="e#3392#3405#0" expanded="true" />
-            <element signature="e#4210#4228#0" expanded="true" />
+            <element signature="e#2298#2311#0" expanded="false" />
+            <element signature="e#3392#3405#0" expanded="false" />
+            <element signature="e#4210#4228#0" expanded="false" />
             <marker date="1497903959781" expanded="true" signature="769:811" ph="INSERT INTO forummedico... " />
             <marker date="1497903959781" expanded="true" signature="769:841" ph="INSERT INTO forummedico... " />
             <marker date="1497903959781" expanded="true" signature="1479:1572" ph="insert into comentarioforummedico... " />
@@ -1108,22 +1219,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="28" column="107" lean-forward="false" selection-start-line="28" selection-start-column="107" selection-end-line="28" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/model/ForumMedico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#274#275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1181,9 +1284,9 @@
         <state relative-caret-position="272">
           <caret line="109" column="73" lean-forward="false" selection-start-line="109" selection-start-column="73" selection-end-line="109" selection-end-column="73" />
           <folding>
-            <element signature="e#2298#2311#0" expanded="true" />
-            <element signature="e#3392#3405#0" expanded="true" />
-            <element signature="e#4210#4228#0" expanded="true" />
+            <element signature="e#2298#2311#0" expanded="false" />
+            <element signature="e#3392#3405#0" expanded="false" />
+            <element signature="e#4210#4228#0" expanded="false" />
             <marker date="1497903959781" expanded="true" signature="769:811" ph="INSERT INTO forummedico... " />
             <marker date="1497903959781" expanded="true" signature="769:841" ph="INSERT INTO forummedico... " />
             <marker date="1497903959781" expanded="true" signature="1479:1572" ph="insert into comentarioforummedico... " />
@@ -1257,14 +1360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -1273,37 +1368,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4604">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <marker date="1497892350927" expanded="true" signature="457:505" ph="SELECT * FRO... usuario" />
-            <marker date="1497892350927" expanded="true" signature="2235:2310" ph="INSERT INTO usuario... " />
-            <marker date="1497892350927" expanded="true" signature="2958:3090" ph="UPDATE usuar... " />
-            <marker date="1497892350927" expanded="true" signature="3875:4007" ph="UPDATE usuar... " />
-            <marker date="1497892350927" expanded="true" signature="4850:4871" ph="SELECT * FRO... usuario" />
-            <marker date="1497892350927" expanded="true" signature="5699:5740" ph="SELECT * FRO... usuario" />
-            <marker date="1497892350927" expanded="true" signature="6404:6443" ph="select * fro... usuario" />
-            <marker date="1497892350927" expanded="true" signature="7339:7378" ph="select * fro... usuario" />
-            <marker date="1497892350927" expanded="true" signature="8172:8210" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="352">
           <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,8 +1428,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+        <state relative-caret-position="848">
+          <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1215">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/model/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1536">
+          <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="189" column="48" lean-forward="false" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
+          <folding>
+            <marker date="1497977345300" expanded="true" signature="457:505" ph="SELECT * FRO... usuario" />
+            <marker date="1497977345300" expanded="true" signature="2237:2312" ph="INSERT INTO usuario... " />
+            <marker date="1497977345300" expanded="true" signature="2960:3092" ph="UPDATE usuar... " />
+            <marker date="1497977345300" expanded="true" signature="3877:4009" ph="UPDATE usuar... " />
+            <marker date="1497977345300" expanded="true" signature="4852:5381" ph="select usuar... usuario" />
+            <marker date="1497977345300" expanded="true" signature="4852:5759" ph="select usuar... " />
+            <marker date="1497977345300" expanded="true" signature="4852:5760" ph="SELECT * FRO... usuario" />
+            <marker date="1497977345300" expanded="true" signature="5422:5721" ph="select usuar... usuario" />
+            <marker date="1497977345300" expanded="true" signature="5652:5720" ph="select * fro... avaliacao" />
+            <marker date="1497977345300" expanded="true" signature="6627:6668" ph="SELECT * FRO... usuario" />
+            <marker date="1497977345300" expanded="true" signature="7366:7405" ph="select * fro... usuario" />
+            <marker date="1497977345300" expanded="true" signature="8338:8377" ph="select * fro... usuario" />
+            <marker date="1497977345300" expanded="true" signature="9171:9209" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>

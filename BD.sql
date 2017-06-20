@@ -15,7 +15,7 @@ create table favorito (idfavorito serial not null primary key,
                       foreign key (idusuario2) references usuario (idusuario));
 
 create table avaliacao (idavaliacao serial not null primary key,
-                       nota varchar(50), idusuatrib int, idusurec int,
+                       nota float, idusuatrib int, idusurec int,
                        foreign key (idusuatrib) references usuario (idusuario),
                       foreign key (idusurec) references usuario (idusuario));
 
@@ -40,6 +40,32 @@ select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuari
 	  where comentarioforummedico.idusuario = usuario.idusuario
 		  and comentarioforummedico.idpostforummedico = forummedico.idforummedico
 		  and idforummedico = '"+id+"' ORDER BY idcomentarioforummedico DESC
+
+insert into avaliacao (nota, idusuatrib, idusurec) values (5, 2, 1)
+
+select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
+      from usuario, usuario as u2, avaliacao
+        where usuario.idusuario = avaliacao.idusuatrib
+          and avaliacao.idusurec = u2.idusuario
+            group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
+            usuario.trabatual, usuario.trabant, usuario.email
+
+select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
+    from usuario, usuario as u2, avaliacao
+      where usuario.idusuario = avaliacao.idusuatrib
+        and avaliacao.idusurec = u2.idusuario
+          group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
+          usuario.trabatual, usuario.trabant, usuario.email
+UNION
+
+select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
+    from usuario
+      WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)
+        ORDER BY sobrenome;
+
 
 
 select*from usuario;

@@ -14,7 +14,14 @@ public class Usuario {
 	private String cpf;
 	private String email;
 	private String sobrenome;
+	private Float nota;
 
+	public Float getNota() {
+		return nota;
+	}
+	public void setNota(Float nota) {
+		this.nota = nota;
+	}
 	public String getEmail() {
 		return email;
 	}

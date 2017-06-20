@@ -64,6 +64,8 @@ public class UsuarioDao {
 
 				u.setCpf(rs.getString("cpf"));
 				System.out.println("cpf: " +u.getCpf());
+
+
 				
 			}
 		return u;
@@ -172,7 +174,20 @@ public class UsuarioDao {
 		Usuario usu;
 
 		try {
-			String sql = "SELECT * FROM usuario";
+			String sql = "select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
+					"  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"    from usuario, usuario as u2, avaliacao\n" +
+					"      where usuario.idusuario = avaliacao.idusuatrib\n" +
+					"        and avaliacao.idusurec = u2.idusuario\n" +
+					"          group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
+					"          usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"UNION\n" +
+					"\n" +
+					"select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
+					"  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"    from usuario\n" +
+					"      WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
+					"        ORDER BY sobrenome;";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 
@@ -186,6 +201,7 @@ public class UsuarioDao {
 				usu.setTrabatual(rs.getString("trabatual"));
 				usu.setTrabant(rs.getString("trabant"));
 				usu.setEmail(rs.getString("email"));
+				usu.setNota(rs.getFloat("media"));
 
 				log.add(usu);
 				System.out.println("Nome Adicionado no Array = " +usu.getNome());
@@ -213,8 +229,9 @@ public class UsuarioDao {
 				usu.setNome(rs.getString("nome"));
 				usu.setSobrenome(rs.getString("sobrenome"));
 				usu.setCidade(rs.getString("cidade"));
-				usu.setTrabatual(rs.getString("TrabAtual"));
-				usu.setTrabant(rs.getString("TrabAnterior"));
+				usu.setTrabatual(rs.getString("trabatual"));
+				usu.setTrabant(rs.getString("trabant"));
+				usu.setNota(rs.getFloat("media"));
 
 			}
 
@@ -266,6 +283,8 @@ public class UsuarioDao {
 			u.setCrm(rs.getString("CRM"));
 
 			u.setCpf(rs.getString("CPF"));
+
+			u.setNota(rs.getFloat("media"));
 
 		}
 		return u;
