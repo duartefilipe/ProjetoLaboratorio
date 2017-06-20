@@ -15,9 +15,9 @@ create table favorito (idfavorito serial not null primary key,
                       foreign key (idusuario2) references usuario (idusuario));
 
 create table avaliacao (idavaliacao serial not null primary key,
-                       nota float, idusuatrib int, idusurec int,
-                       foreign key (idusuatrib) references usuario (idusuario),
-                      foreign key (idusurec) references usuario (idusuario));
+                        nota float, idusuatrib int, idusurec int,
+                          foreign key (idusuatrib) references usuario (idusuario),
+                          foreign key (idusurec) references usuario (idusuario));
 
 create table forummedico (idforummedico serial not null primary key,
                          idusuario int, titulo text, texto text, tipo varchar(50),
@@ -72,3 +72,25 @@ select*from usuario;
 select*from mural;
 select*from favorito;
 select*from avaliacao;
+
+/*
+pra teste
+select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+	usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
+      from usuario, usuario as u2, avaliacao
+        where usuario.idusuario = avaliacao.idusuatrib
+          and avaliacao.idusurec = u2.idusuario
+            group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
+            usuario.trabatual, usuario.trabant, usuario.email
+UNION
+
+select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+	usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
+      from usuario  WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)
+ORDER BY sobrenome;
+
+select*from avaliacao
+delete from avaliacao where idavaliacao >=0
+select*from usuario
+insert into avaliacao (nota, idusurec, idusuatrib) values (5, 13, 14)
+*/

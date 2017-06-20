@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import br.csi.model.Avaliacao;
 import br.csi.model.Usuario;
 import br.csi.util.Connect;
 
@@ -175,19 +177,17 @@ public class UsuarioDao {
 
 		try {
 			String sql = "select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
-					"  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
-					"    from usuario, usuario as u2, avaliacao\n" +
-					"      where usuario.idusuario = avaliacao.idusuatrib\n" +
-					"        and avaliacao.idusurec = u2.idusuario\n" +
-					"          group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
-					"          usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"\tusuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"      from usuario,  avaliacao\n" +
+					"        where avaliacao.idusurec = usuario.idusuario\n" +
+					"            group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
+					"            usuario.trabatual, usuario.trabant, usuario.email\n" +
 					"UNION\n" +
 					"\n" +
 					"select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
-					"  usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
-					"    from usuario\n" +
-					"      WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
-					"        ORDER BY sobrenome;";
+					"\tusuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"      from usuario  WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
+					"ORDER BY sobrenome;";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 
@@ -333,4 +333,26 @@ public class UsuarioDao {
         
 		return deletar;
     }
+
+	public boolean cadastraAvaliacao(Avaliacao a) throws SQLException {
+		Connection c = null;
+		PreparedStatement stmt = null;
+		boolean retorno = false;
+
+		try {
+			c = Connect.getConexao();
+			String sql="insert into avaliacao (nota, idusuatrib, idusurec) values (?, ?, ?)";
+			stmt = c.prepareStatement(sql);
+			stmt.setFloat(1, a.getNota());
+			stmt.setInt(2, a.getIdusuatrib());
+			stmt.setInt(3, a.getIdusurec());
+			stmt.execute();
+			stmt.close();
+			retorno = true;
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return retorno;
+		}
+		return retorno;
+	}
 }

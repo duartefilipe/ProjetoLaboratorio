@@ -95,6 +95,7 @@
 								<th class="header headerSortUp text-center">Trab Atual <i class="fa fa-sort"></i></th>
 								<th class="header headerSortUp text-center">Trab anterior <i class="fa fa-sort"></i></th>
 								<th class="header headerSortUp text-center">Nota <i class="fa fa-sort"></i></th>
+								<th class="header headerSortUp text-center">Avaliar</th>
 								<th class="header headerSortUp text-center">Favoritos</th>
 								<th class="header headerSortUp text-center">Email</th>
 							</tr>
@@ -109,7 +110,10 @@
 								<td>${usuarios.cidade}</td>
 								<td>${usuarios.trabatual}</td>
 								<td>${usuarios.trabant}</td>
-								<td>${usuarios.nota}</td>
+								<td>${usuarios.nota} </td>
+								<td align="center">
+									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-building-o"></i> </a>
+								</td>
 								<td align="center">
 									<form action="CadastrarFavorito" method="post">
 										<input type="hidden" name="idusuario2" value="${usuarios.id }">
@@ -119,53 +123,12 @@
 										</button>
 									</form>
 								</td>
-								<!--<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalemail">
-										<img src="resources/images/email.png" style="width: 150; height: 30px;" />
-									</a>
-								</td>-->
+
 								<td align="center">
 									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
 								</td>
 							</tr>
 						</c:forEach>
-						
-						
-						<!-- 	<tr>
-								<td>pedro</td>
-								<td>santa maria</td>
-								<td>caridae</td>
-								<td>cauzzo</td>
-								<td>5</td>
-								<td align="center"><a href="#"><img
-										src="resources/images/adiciona.png" style="width: 150; height: 30px;" /></a></td>
-								<td align="center"><a href="#"><img
-										src="resources/images/email.png" style="width: 150; height: 30px;" /></a></td>
-							</tr>
-
-							<tr>
-								<td>pedro</td>
-								<td>santa maria</td>
-								<td>caridae</td>
-								<td>cauzzo</td>
-								<td>5</td>
-								<td align="center"><a href="#"><img
-										src="resources/images/adiciona.png" style="width: 150; height: 30px;" /></a></td>
-								<td align="center"><a href="#"><img
-										src="resources/images/email.png" style="width: 150; height: 30px;" /></a></td>
-							</tr>
-
-							<tr>
-								<td>pedro</td>
-								<td>santa maria</td>
-								<td>caridae</td>
-								<td>cauzzo</td>
-								<td>5</td>
-								<td align="center"><a href="#"><img
-										src="resources/images/adiciona.png" style="width: 150; height: 30px;" /></a></td>
-								<td align="center"><a href="#"><img
-										src="resources/images/email.png" style="width: 150; height: 30px;" /></a></td>
-							</tr>   -->
 
 						</tbody>
 					</table>
@@ -230,6 +193,45 @@
 	</div>
 
 	<!-- modal email fim -->
+
+	<!-- modal avaliacao inicio -->
+	<script>
+        function setaDadosModal(idusuatrib, idusurec) {
+            document.getElementById('idusurec').value = idusurec;
+            document.getElementById('idusuatrib').value = idusuatrib;
+
+        }
+	</script>
+
+	<div class="modal fade" id="modalavaliacao" tabindex="-1" role="dialog" aria-labelledby="myModalavaliacao">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalavaliacao">Realizar Avaliaçao</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" action="CadastrarAvaliacao" method="post">
+						<input type="hidden" name="idusurec" id="idusurec" value="idusurec">
+						<input type="hidden" name="idusuatrib" id="idusuatrib" value="idusuatrib">
+						<div class="form-group">
+							<label class="control-label col-sm-2" >Nota:</label>
+							<div class="col-sm-10">
+								<input class="form-control" name="nota"  placeholder="Digite aqui sua nota para este profissional"/>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-default">Avaliar</button>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal avaliacao fim -->
 
 	<!-- JavaScript -->
 	<script src="resources/js/jquery-1.10.2.js"></script>

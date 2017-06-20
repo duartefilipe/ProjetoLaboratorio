@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import br.csi.model.Avaliacao;
 import br.csi.util.Connect;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -80,6 +81,15 @@ public class UsuarioController {
 		}
 	}
 
+	@RequestMapping ("CadastrarAvaliacao")
+	public String adiciona (Avaliacao avaliacao) throws ClassNotFoundException, SQLException{
+		boolean retorno = new UsuarioDao().cadastraAvaliacao(avaliacao);
+		if(retorno){
+			return "medico/Profissionais";
+		}else{
+			return "medico/Profissionais";
+		}
+	}
 
 
 	@RequestMapping("AlterarMedico")
