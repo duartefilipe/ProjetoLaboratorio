@@ -27,7 +27,7 @@
 
 
 
-	
+
 	<div id="wrapper">
 
 		<!-- Sidebar -->
@@ -125,7 +125,7 @@
 								</td>
 
 								<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
+									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModalEmail('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
 								</td>
 							</tr>
 						</c:forEach>
@@ -141,7 +141,7 @@
 
 	<!-- modal email inicio -->
 	<script>
-        function setaDadosModal(emailDest, nomeDest, idDest) {
+        function setaDadosModalEmail(emailDest, nomeDest, idDest) {
             document.getElementById('emailDest').value = emailDest;
             document.getElementById('nomeDest').value = nomeDest;
             document.getElementById('idDest').value = idDest;

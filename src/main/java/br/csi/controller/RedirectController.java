@@ -126,7 +126,7 @@ public class RedirectController {
 		u = uD.pesquisaUsuario(id);
 
 		rq.setAttribute("usuario", u);
-		return "usuario/PerfilUsu";
+		return "usuario/Perfil";
 	}
 
 	@RequestMapping ("redRespForum")

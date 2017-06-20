@@ -91,6 +91,15 @@ public class UsuarioController {
 		}
 	}
 
+	@RequestMapping ("CadastrarAvaliacaoUsu")
+	public String adicionaAvaUsu (Avaliacao avaliacao) throws ClassNotFoundException, SQLException{
+		boolean retorno = new UsuarioDao().cadastraAvaliacao(avaliacao);
+		if(retorno){
+			return "usuario/Profissionais";
+		}else{
+			return "usuario/Profissionais";
+		}
+	}
 
 	@RequestMapping("AlterarMedico")
 	public String AlteraPerfilMedico(Usuario u, HttpServletRequest rq) throws NoSuchAlgorithmException, ClassNotFoundException, SQLException{

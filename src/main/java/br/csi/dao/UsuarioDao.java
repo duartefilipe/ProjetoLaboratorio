@@ -284,7 +284,6 @@ public class UsuarioDao {
 
 			u.setCpf(rs.getString("CPF"));
 
-			u.setNota(rs.getFloat("media"));
 
 		}
 		return u;
