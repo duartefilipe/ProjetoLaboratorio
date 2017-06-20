@@ -36,6 +36,27 @@ public class MuralController {
         }
     }
 
+    @RequestMapping("AlteraMuralUsu")
+    public String alteraMuralUsu (Mural m) throws ClassNotFoundException, SQLException {
+
+        boolean retorno = new MuralDao().alteraMural(m);
+        if(retorno){
+            return "usuario/MuralUsuario";
+        }else{
+            return "usuario/MuralUsuario";
+        }
+    }
+
+    @RequestMapping("AlteraMuralMed")
+    public String alteraMuralMed (Mural m) throws ClassNotFoundException, SQLException {
+
+        boolean retorno = new MuralDao().alteraMural(m);
+        if(retorno){
+            return "medico/MuralMedico";
+        }else{
+            return "medico/MuralMedico";
+        }
+    }
 
 
     @RequestMapping("RemoverMuralMedico")

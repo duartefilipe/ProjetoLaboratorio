@@ -38,6 +38,27 @@ public class MuralDao {
         return retorno;
     }
 
+    public boolean alteraMural(Mural m) throws ClassNotFoundException, SQLException {
+        boolean retorno = false;
+        Connection c = null;
+        PreparedStatement stmt = null;
+
+        c = Connect.getConexao();
+
+        String sql="UPDATE mural SET titulo=?, texto=? WHERE idMural=?";
+        stmt = c.prepareStatement(sql);
+
+        stmt.setString(1, m.getTitulo());
+        stmt.setString(2, m.getTexto());
+        stmt.setInt(3, m.getIdMural());
+
+        stmt.execute();
+        stmt.close();
+        retorno = true;
+
+        return retorno;
+    }
+
     public ArrayList<Mural> getPostsMural() throws ClassNotFoundException {
 
         ArrayList<Mural> log2 = new ArrayList<Mural>();

@@ -102,7 +102,7 @@
                                             <td>${favId.nome}</td>
                                             <td>${favId.sobrenome}</td>
                                             <td>${favId.tipo}</td>
-                                            <td>5</td>
+                                            <td>${favId.nota}</td>
                                             <td align="center">
                                                 <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
                                             </td>

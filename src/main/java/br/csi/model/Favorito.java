@@ -8,6 +8,15 @@ public class Favorito {
     private String sobrenome;
     private String tipo;
     private String email;
+    private Float nota;
+
+    public Float getNota() {
+        return nota;
+    }
+
+    public void setNota(Float nota) {
+        this.nota = nota;
+    }
 
     public String getEmail() {
         return email;
