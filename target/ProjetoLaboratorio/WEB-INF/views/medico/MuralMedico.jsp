@@ -78,6 +78,7 @@
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>
+                        <th class="header headerSortUp text-center">ID</th>
                         <th class="header headerSortUp text-center">Titulo</th>
                         <th class="header headerSortUp text-center">Texto</th>
                         <th class="header headerSortUp text-center">Alterar Post</th>
@@ -87,13 +88,13 @@
                     <tbody>
                     <c:forEach var="posts" items="${posts}">
                         <tr>
-                            <input type="hidden" name="idMural" value="${posts.idMural}">
+                            <td>${posts.idMural}</td>
                             <td>${posts.titulo}</td>
                             <td>${posts.texto}</td>
-                            <!--<td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><img src="resources/images/alterar.jpg" style="width: 150; height: 30px;" /></a></td>-->
-                            <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-undo" style="color: black"></i></a></td>
+                            <td align="center">
+                                <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o"></i> </a>
+                            </td>
                             <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
-                            <!--<td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><img src="resources/images/excluir.png" style="width: 150; height: 30px;" /></a></td>-->
 
                         </tr>
                     </c:forEach>
@@ -108,6 +109,51 @@
 </div><!-- /#page-wrapper -->
 
 
+
+
+<!--modal alterar inicio-->
+<script>
+    function setaDadosModalAltera(idMural, titulo, texto) {
+        document.getElementById('idMural').value = idMural;
+        document.getElementById('titulo').value = titulo;
+        document.getElementById('texto').value = texto;
+
+    }
+</script>
+
+<div class="modal fade" id="modalavaliacao" tabindex="-1" role="dialog" aria-labelledby="myModalavaliacao">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalavaliacao">Realizar Alteraçao no anuncio</h4>
+
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="AlteraMuralMed" method="post">
+                    <input type="hidden" name="idMural" id="idMural" value="idMural">
+                    <div class="form-group">
+                        <label class="control-label" >Titulo:</label>
+                            <input class="form-control" name="titulo" id="titulo" value="titulo"/>
+
+                        <label class="control-label " >Texto:</label>
+
+                        <textarea class="form-control" rows="5" name="texto" id="texto" value="texto"></textarea>
+
+                    </div>
+                    <button type="submit" class="btn btn-default">Alterar</button>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal alterar fim-->
+
+
 <!-- JavaScript -->
 <script src="resources/js/jquery-1.10.2.js"></script>
 <script src="resources/js/bootstrap.js"></script>
@@ -118,75 +164,5 @@
 <script src="resources/js/morris/chart-data-morris.js"></script>
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
-
-<div class="modal fade" id="modalcadmur" tabindex="-1" role="dialog" aria-labelledby="myModalcadmur">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalcadmur">Cadastrar</h4>
-            </div>
-            <div class="modal-body">
-                <form action="CadastrarMural" method="post">
-                    <input type="hidden" name="idUsuario" value="${usuario.id }">
-
-                    <label>Titulo:</label>
-                    <input type="text" class="form-control" name="titulo" placeholder="titulo">
-
-                    <label>Texto:</label>
-                    <textarea type="text" class="form-control" name="texto" id="texto" placeholder="texto"></textarea>
-                    <hr>
-                    <button type="submit" class="btn btn-primary pull-right">Cadastrar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="modal fade" id="modalemail" tabindex="-1" role="dialog" aria-labelledby="myModalEmail">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalEmail">Enviar email</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <input type="hidden" name="id" value="${usuarios.id }">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="email1">Remetente:</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="email1" value="${usuario.email}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="email2">Destinatario:</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="email2" placeholder="email" value="${usuarios.email}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="comment">Texto:</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Enviar Email</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>

@@ -82,7 +82,8 @@
                             <input type="hidden" name="idMural" value="${posts.idMural}">
                             <td>${posts.titulo}</td>
                             <td>${posts.texto}</td>
-                            <td><a href="#" data-toggle="modal" data-target="#modalaltera" onclick="setaAlteraDadosModal('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"><i class="fa fa-undo" style="color: black"></i></a></td>
+                            <td><a href="#" data-toggle="modal" data-target="#modalaltera" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o"></i> </a></td>
+
                             <td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
 
                             <!--<td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><img src="resources/images/alterar.png" style="width: 150; height: 30px;" /></a></td>
@@ -114,47 +115,37 @@
 
 
 
-<!-- modal usuario altera post inicio -->
+<!--modal alterar inicio-->
 <script>
-    function setaAlteraDadosModal(idMural, titulo, texto) {
+    function setaDadosModalAltera(idMural, titulo, texto) {
         document.getElementById('idMural').value = idMural;
-        document.getElementById('tituloMur').value = titulo;
-        document.getElementById('textoMur').value = texto;
+        document.getElementById('titulo').value = titulo;
+        document.getElementById('texto').value = texto;
+
     }
 </script>
 
-<div class="modal fade" id="modalaltera" tabindex="-1" role="dialog" aria-labelledby="myModalAltera">
+<div class="modal fade" id="modalaltera" tabindex="-1" role="dialog" aria-labelledby="myModalaltera">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalAltera">Alterar</h4>
+                <h4 class="modal-title" id="myModalaltera">Realizar Alteraçao no anuncio</h4>
+
             </div>
             <div class="modal-body">
                 <form class="form-horizontal" action="AlteraMuralUsu" method="post">
-                    <input type="hidden" name="idDest" id="idDest" value="idDest">
-
+                    <input type="hidden" name="idMural" id="idMural" value="idMural">
                     <div class="form-group">
-                        <label class="control-label col-sm-2" >Titulo:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="titulo" id="tituloMur" value="tituloMur">
-                        </div>
-                    </div>
+                        <label class="control-label" >Titulo:</label>
+                        <input class="form-control" name="titulo" id="titulo" value="titulo"/>
 
+                        <label class="control-label " >Texto:</label>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" >Texto:</label>
-                        <div class="col-sm-10">
-                            <textarea type="text" class="form-control" name="texto" id="textoMur" value="textoMur"></textarea>
-                        </div>
-                    </div>
+                        <textarea class="form-control" rows="5" name="texto" id="texto" value="texto"></textarea>
 
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-default" id="enviar">Enviar</button>
-                        </div>
                     </div>
+                    <button type="submit" class="btn btn-default">Alterar</button>
 
                 </form>
             </div>
@@ -164,8 +155,7 @@
         </div>
     </div>
 </div>
-
-<!-- modal usuario altera post fim -->
+<!--modal alterar fim-->
 
 </body>
 </html>

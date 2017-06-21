@@ -91,7 +91,6 @@
                             <th class="header headerSortUp text-center">Nome <i class="fa fa-sort"></i></th>
                             <th class="header headerSortUp text-center">Sobrenome <i class="fa fa-sort"></i></th>
                             <th class="header headerSortUp text-center">Profissão <i class="fa fa-sort"></i></th>
-                            <th class="header headerSortUp text-center">Nota <i class="fa fa-sort"></i></th>
                             <th class="header headerSortUp text-center">Email </th>
                             <th class="header headerSortUp text-center">Excluir </th>
                         </tr>
@@ -104,7 +103,6 @@
                                 <td>${favId.nome}</td>
                                 <td>${favId.sobrenome}</td>
                                 <td>${favId.tipo}</td>
-                                <td>${favId.nota}</td>
                                 <td align="center">
                                     <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
                                 </td>

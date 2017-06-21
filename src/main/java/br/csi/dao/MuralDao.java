@@ -137,7 +137,7 @@ public class MuralDao {
                 m.setTexto(rs.getString("texto"));
                 log4.add(m);
                 System.out.println("titulo do Post no mural especifico do medico = " +m.getTitulo());
-                System.out.println("titulo do Post no mural especifico do medico = " +m.getTexto());
+                System.out.println("texto do Post no mural especifico do medico = " +m.getTexto());
 
             }
 

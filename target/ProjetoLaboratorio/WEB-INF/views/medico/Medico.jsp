@@ -89,7 +89,6 @@
                                         <th class="header headerSortUp text-center">Nome <i class="fa fa-sort"></i></th>
                                         <th class="header headerSortUp text-center">Sobrenome <i class="fa fa-sort"></i></th>
                                         <th class="header headerSortUp text-center">Profissão <i class="fa fa-sort"></i></th>
-                                        <th class="header headerSortUp text-center">Nota <i class="fa fa-sort"></i></th>
                                         <th class="header headerSortUp text-center">Email </th>
                                         <th class="header headerSortUp text-center">Excluir </th>
                                     </tr>
@@ -102,7 +101,6 @@
                                             <td>${favId.nome}</td>
                                             <td>${favId.sobrenome}</td>
                                             <td>${favId.tipo}</td>
-                                            <td>${favId.nota}</td>
                                             <td align="center">
                                                 <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
                                             </td>
@@ -200,36 +198,7 @@
 
     <!-- modal email fim -->
 
-    <!------------------------------- modal mandar email --------------------------------
-    <div class="modal fade" id="myModal_${favId.idusuario2}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <c:forEach var="s" items="${serv}">
-                    <c:if test="${favId.idusuario2 == s.idusuario2}">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Enviar Email</h4>
-                </div>
-                <form action="mandarEmail" method="post">
-                    <div class="modal-body">
-                        <input type="hidden" name="id_dest" value="${s.idusuario2}">
-                        <label class="pull-left">Para:</label>
-                        <input type="text" name="nome" class="form-control" value="${s.email}"  readonly="true">
-                        <label class="pull-left">Mensagem:</label></br>
-                        <textarea rows="5" cols="60" class="form-control" name="mensagem" value="" placeholder="Digite aqui sua mensagem"></textarea>
-                    </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-success" id="enviar">Enviar</button>
-                    </div>
-                </form>
-                </c:if>
-                </c:forEach>
-            </div>
-        </div>
-    </div>
-    <!------------------------------- modal mandar email -------------------------------->
 
 
 

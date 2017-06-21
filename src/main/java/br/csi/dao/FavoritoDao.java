@@ -119,28 +119,7 @@ public class FavoritoDao {
 
 
         try {
-            String sql = "select u2.idusuario, AVG(nota) as media, usuario.nome,\n" +
-                    "u2.email as email_favorito,\n" +
-                    "u2.idusuario as id2,\n" +
-                    "u2.nome as nome_favorito,\n" +
-                    "u2.sobrenome as sobrenome_favorito,\n" +
-                    "u2.tipo as tipo_favorito\n" +
-                    "from usuario, favorito, usuario as u2, avaliacao\n" +
-                    "where usuario.idusuario = favorito.idusuario1\n" +
-                    "and favorito.idusuario2 = u2.idusuario\n" +
-                    "and avaliacao.idusurec = u2.idusuario\n" +
-                    "and idusuario1 =  '"+id+"'\n" +
-                    "group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
-                    "usuario.trabatual, usuario.trabant, usuario.email, u2.email, u2.idusuario\n" +
-                    "UNION\n" +
-                    "select usuario.idusuario, NULL as media, usuario.nome,\n" +
-                    "u2.email as email_favorito,\n" +
-                    "u2.idusuario as id2,\n" +
-                    "u2.nome as nome_favorito,\n" +
-                    "u2.sobrenome as sobrenome_favorito,\n" +
-                    "u2.tipo as tipo_favorito\n" +
-                    "from usuario, usuario as u2  WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
-                    "\n";
+            String sql = "select usuario.idusuario, usuario.nome,u2.email as email_favorito, u2.idusuario as id2, u2.nome as nome_favorito, u2.sobrenome as sobrenome_favorito, u2.tipo as tipo_favorito from usuario, favorito, usuario as u2 where usuario.idusuario = favorito.idusuario1 and favorito.idusuario2 = u2.idusuario and idusuario1 = '"+id+"'";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -152,7 +131,7 @@ public class FavoritoDao {
                 fav.setSobrenome(rs.getString("sobrenome_favorito"));
                 fav.setTipo(rs.getString("tipo_favorito"));
                 fav.setEmail(rs.getString("email_favorito"));
-                fav.setNota(rs.getFloat("media"));
+                //fav.setNota(rs.getFloat("media"));
 
                 LogFavId.add(fav);
                 System.out.println("nome do favorito adicionado no Array favoritos = " +fav.getNome());
