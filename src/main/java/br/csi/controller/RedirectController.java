@@ -67,6 +67,16 @@ public class RedirectController {
 		return "medico/PostsForumMedico";
 	}
 
+	@RequestMapping("RedPostsForumMedicoGeral")
+	public String redirectPostsForumMedicoGeral(HttpServletRequest rq) throws ClassNotFoundException{
+		return "medico/PostsForumMedicoGeral";
+	}
+
+	@RequestMapping("RedPostsForumUsuario")
+	public String redirectPostsForumUsuario(HttpServletRequest rq) throws ClassNotFoundException{
+		return "usuario/PostsForumUsuario";
+	}
+
 	@RequestMapping("RedForumUsu")
 	public String redirectForumUsu(HttpServletRequest rq) throws ClassNotFoundException{
 		return "usuario/Forum";

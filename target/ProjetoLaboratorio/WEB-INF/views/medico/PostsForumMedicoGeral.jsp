@@ -14,6 +14,7 @@
     <link href="resources/css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,8 +24,8 @@
 <body>
 <c:out value="${requestScope.usuario}" />
 
-<jsp:useBean id="log4" class="br.csi.dao.MuralDao" />
-<c:set var="posts" value="${log4.getPostsMural2(usuario.id)}" />
+<jsp:useBean id="logforummedGeral" class="br.csi.dao.ForumMedicoDao" />
+<c:set var="postsforum" value="${logforummedGeral.getPostsForumMedicoGeral(usuario.id)}" />
 
 <div id="wrapper">
 
@@ -38,15 +39,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="RedUsu">LabMed</a>
+            <a class="navbar-brand" href="RedMedico">LabMed</a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
-                <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                <li><a href="RedForumUsu">Forum</a></li>
+                <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
+                <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="RedForum">Médicos</a></li>
+                        <li><a href="RedForumGeral">Geral</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-user">
@@ -54,9 +61,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
-                        <li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
+                        <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
                         <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumUsuario"><i class="fa fa-edit"></i>  Meus Posts no Forum </a></li>
+                        <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
+                        <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
                         <li class="divider"></li>
                         <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                     </ul>
@@ -68,6 +76,8 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="table-responsive text-center">
+                <h2 align="center">Gerenciar meus Posts no forum dos medicos</h2>
+                <hr>
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>
@@ -78,14 +88,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="posts" items="${posts}">
+                    <c:forEach var="postsforum" items="${postsforum}">
                         <tr>
-                            <input type="hidden" name="idMural" value="${posts.idMural}">
-                            <td>${posts.titulo}</td>
-                            <td>${posts.texto}</td>
-                            <td><a href="#" data-toggle="modal" data-target="#modalaltera" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o"></i> </a></td>
-
-                            <td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
+                            <input type="hidden" name="id" value="${postsforum.id}">
+                            <td>${postsforum.tituloForum}</td>
+                            <td>${postsforum.textoForum}</td>
+                            <td><a href="#" data-toggle="modal" data-target="#modalalterapost" onclick="setaDadosModalAltera('${postsforum.id}', '${postsforum.tituloForum}', '${postsforum.textoForum}')"><i class="fa fa-undo" style="color: black"></i></a></td>
+                            <td align="center"><a href="RemoverPostForumMedico?id=${postsforum.id}"><i class="fa fa-remove" style="color: black"></i></a></td>
 
                         </tr>
                     </c:forEach>
@@ -99,48 +108,34 @@
 </div>
 </div><!-- /#page-wrapper -->
 
-
-<!-- JavaScript -->
-<script src="resources/js/jquery-1.10.2.js"></script>
-<script src="resources/js/bootstrap.js"></script>
-
-<!-- Page Specific Plugins -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-<script src="resources/js/morris/chart-data-morris.js"></script>
-<script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
-<script src="resources/js/tablesorter/tables.js"></script>
-
-
-
-<!--modal alterar inicio-->
+<!--modal alterar post forum inicio-->
 <script>
-    function setaDadosModalAltera(idMural, titulo, texto) {
-        document.getElementById('idMural').value = idMural;
-        document.getElementById('titulo').value = titulo;
-        document.getElementById('texto').value = texto;
+    function setaDadosModalAltera(id, tituloForum, textoForum) {
+        document.getElementById('id').value = id;
+        document.getElementById('tituloForum').value = tituloForum;
+        document.getElementById('textoForum').value = textoForum;
 
     }
 </script>
 
-<div class="modal fade" id="modalaltera" tabindex="-1" role="dialog" aria-labelledby="myModalaltera">
+<div class="modal fade" id="modalalterapost" tabindex="-1" role="dialog" aria-labelledby="myModalalterapost">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalaltera">Realizar Alteraçao no anuncio</h4>
+                <h4 class="modal-title" id="myModalalterapost">Realizar Alteraçao no post do forum</h4>
 
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="AlteraMuralUsu" method="post">
-                    <input type="hidden" name="idMural" id="idMural" value="idMural">
+                <form class="form-horizontal" action="AlteraForumlMedGeral" method="post">
+                    <input type="hidden" name="id" id="id" value="id">
                     <div class="form-group">
                         <label class="control-label" >Titulo:</label>
-                        <input class="form-control" name="titulo" id="titulo" value="titulo"/>
+                        <input class="form-control" name="tituloForum" id="tituloForum" value="tituloForum"/>
 
                         <label class="control-label " >Texto:</label>
 
-                        <textarea class="form-control" rows="5" name="texto" id="texto" value="texto"></textarea>
+                        <textarea class="form-control" rows="5" name="textoForum" id="textoForum" value="textoForum"></textarea>
 
                     </div>
                     <button type="submit" class="btn btn-default">Alterar</button>
@@ -153,7 +148,19 @@
         </div>
     </div>
 </div>
-<!--modal alterar fim-->
+<!--modal alterar post forum fim-->
+
+
+<!-- JavaScript -->
+<script src="resources/js/jquery-1.10.2.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+
+<!-- Page Specific Plugins -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+<script src="resources/js/morris/chart-data-morris.js"></script>
+<script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
+<script src="resources/js/tablesorter/tables.js"></script>
 
 </body>
 </html>

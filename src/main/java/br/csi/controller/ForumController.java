@@ -82,4 +82,55 @@ public class ForumController {
 		}
 	}
 
+	@RequestMapping("RemoverPostForumUsuario")
+	public String DeletaPostForumUsuario(int id , HttpServletRequest rq) throws SQLException, Exception{
+
+		ForumMedicoDao fmD = new ForumMedicoDao();
+
+
+		System.out.println("post forum medico :  "+id);
+
+		boolean retorno = fmD.RemoverPostForumMedico(id);
+		if(retorno){
+			rq.setAttribute("postsforum", fmD.getPostsForumMedico());
+			return "usuario/PostsForumUsuario";
+		}else{
+			rq.setAttribute("msg","roblema pra excluir");
+			return "usuario/PostsForumUsuario";
+		}
+	}
+
+	@RequestMapping("AlteraForumlMed")
+	public String alteraForumlMed (ForumMedico fm) throws ClassNotFoundException, SQLException {
+
+		boolean retorno = new ForumMedicoDao().alteraForum(fm);
+		if(retorno){
+			return "medico/PostsForumMedico";
+		}else{
+			return "medico/PostsForumMedico";
+		}
+	}
+
+	@RequestMapping("AlteraForumlMedGeral")
+	public String alteraForumlMedGeral (ForumMedico fm) throws ClassNotFoundException, SQLException {
+
+		boolean retorno = new ForumMedicoDao().alteraForum(fm);
+		if(retorno){
+			return "medico/PostsForumMedicoGeral";
+		}else{
+			return "medico/PostsForumMedicoGeral";
+		}
+	}
+
+	@RequestMapping("AlteraForumlUsu")
+	public String alteraForumlUsu (ForumMedico fm) throws ClassNotFoundException, SQLException {
+
+		boolean retorno = new ForumMedicoDao().alteraForum(fm);
+		if(retorno){
+			return "usuario/PostsForumUsuario";
+		}else{
+			return "usuario/PostsForumUsuario";
+		}
+	}
+
 }

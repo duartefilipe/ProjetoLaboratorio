@@ -42,6 +42,7 @@
                 <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
                 <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
+                <li><a href="RedPostsForumUsuario"><i class="fa fa-edit"></i>  Meus Posts no Forum </a></li>
                 <li><a href="RedForumUsu">Forum</a></li>
             </ul>
 
