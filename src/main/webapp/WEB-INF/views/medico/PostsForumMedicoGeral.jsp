@@ -94,7 +94,7 @@
                             <td>${postsforum.tituloForum}</td>
                             <td>${postsforum.textoForum}</td>
                             <td><a href="#" data-toggle="modal" data-target="#modalalterapost" onclick="setaDadosModalAltera('${postsforum.id}', '${postsforum.tituloForum}', '${postsforum.textoForum}')"><i class="fa fa-undo" style="color: black"></i></a></td>
-                            <td align="center"><a href="RemoverPostForumMedico?id=${postsforum.id}"><i class="fa fa-remove" style="color: black"></i></a></td>
+                            <td align="center"><a href="RemoverPostForumMedicoGeral?id=${postsforum.id}"><i class="fa fa-remove" style="color: black"></i></a></td>
 
                         </tr>
                     </c:forEach>

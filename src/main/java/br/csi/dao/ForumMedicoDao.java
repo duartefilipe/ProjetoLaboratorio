@@ -260,13 +260,33 @@ public class ForumMedicoDao {
 		return logforumusu;
 	}
 
-	public boolean RemoverPostForumMedico(int id) throws SQLException, Exception {
+	public boolean RemoverPostForum(int id) throws SQLException, Exception {
 		boolean deletar = false;
 		Connection c = null;
 		PreparedStatement stmt = null;
 
 		c = Connect.getConexao();
 		String sql=" delete from forummedico where idforummedico=?";
+
+		stmt = c.prepareStatement(sql);
+		stmt.setInt(1,id);
+		stmt.execute();
+		stmt.close();
+		deletar = true;
+
+		return deletar;
+	}
+
+	public boolean RemoverComentForum(int id) throws SQLException, Exception {
+		boolean deletar = false;
+		Connection c = null;
+		PreparedStatement stmt = null;
+
+		c = Connect.getConexao();
+		String sql=" DELETE FROM comentarioforummedico \n" +
+				"\tUSING forummedico \n" +
+				"    \tWHERE comentarioforummedico.idpostforummedico = forummedico.idforummedico \n" +
+				"        \tAND idforummedico = ?";
 
 		stmt = c.prepareStatement(sql);
 		stmt.setInt(1,id);

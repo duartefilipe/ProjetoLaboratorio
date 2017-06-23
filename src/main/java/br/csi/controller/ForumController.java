@@ -72,8 +72,10 @@ public class ForumController {
 
 		System.out.println("post forum medico :  "+id);
 
-		boolean retorno = fmD.RemoverPostForumMedico(id);
-		if(retorno){
+		boolean retorno = fmD.RemoverComentForum(id);
+		boolean retorno2 = fmD.RemoverPostForum(id);
+
+		if(retorno && retorno2){
 			rq.setAttribute("postsforum", fmD.getPostsForumMedico());
 			return "medico/PostsForumMedico";
 		}else{
@@ -88,14 +90,14 @@ public class ForumController {
 		ForumMedicoDao fmD = new ForumMedicoDao();
 
 
-		System.out.println("post forum medico :  "+id);
+		boolean retorno = fmD.RemoverComentForum(id);
+		boolean retorno2 = fmD.RemoverPostForum(id);
 
-		boolean retorno = fmD.RemoverPostForumMedico(id);
-		if(retorno){
+		if(retorno && retorno2){
 			rq.setAttribute("postsforum", fmD.getPostsForumMedico());
 			return "usuario/PostsForumUsuario";
 		}else{
-			rq.setAttribute("msg","roblema pra excluir");
+			rq.setAttribute("msg","problema pra excluir");
 			return "usuario/PostsForumUsuario";
 		}
 	}
