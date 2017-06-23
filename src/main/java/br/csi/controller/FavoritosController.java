@@ -22,6 +22,7 @@ public class FavoritosController {
 		Usuario usuario =(Usuario) sessao.getAttribute("usuario");
 		System.out.println("Usuario ID: " + usuario.getId());
 
+
         System.out.print("ID do usuario logado: "+ usuario.getId() +"\n");
         System.out.print("ID do usuario que vai adicionar na tabela: "+f.getIdusuario2()+"\n");
 
@@ -31,6 +32,38 @@ public class FavoritosController {
 			return "medico/Profissionais";
 		}else{
 			return "medico/Medico";
+		}
+	}
+
+	@RequestMapping ("cadfav")
+	public String adicionafav (int idusuario2, HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+
+		HttpSession sessao = rq.getSession(true);
+		Usuario usuario =(Usuario) sessao.getAttribute("usuario");
+
+		boolean retorno = new FavoritoDao().cadfav(idusuario2, usuario.getId());
+
+		if(retorno){
+			rq.setAttribute("msg", "Usuario cadastrado como favorito");
+			return "medico/Profissionais";
+		}else{
+			return "medico/Medico";
+		}
+	}
+
+	@RequestMapping ("cadfavusu")
+	public String adicionafavusu (int idusuario2, HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+
+		HttpSession sessao = rq.getSession(true);
+		Usuario usuario =(Usuario) sessao.getAttribute("usuario");
+
+		boolean retorno = new FavoritoDao().cadfav(idusuario2, usuario.getId());
+
+		if(retorno){
+			rq.setAttribute("msg", "Usuario cadastrado como favorito");
+			return "usuario/Profissionais";
+		}else{
+			return "usuario/Profissionais";
 		}
 	}
 

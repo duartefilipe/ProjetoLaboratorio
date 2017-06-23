@@ -82,7 +82,7 @@
 		</div>
 		<!-- /#wrapper -->
 
-		<div id="page-wrapper">
+
 			<div class="row">
 				<div class="table-responsive text-center">
 					<table class="table table-bordered table-hover table-striped tablesorter ">
@@ -115,13 +115,7 @@
 									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-building-o"></i> </a>
 								</td>
 								<td align="center">
-									<form action="CadastrarFavoritoUsu" method="post">
-										<input type="hidden" name="idusuario2" value="${usuarios.id }">
-										<!--	<img href="#" src="resources/images/adiciona.png" style="width: 150; height: 30px;" />  -->
-										<button type="submit" class="">
-											<a type="submit"><img href="#" src="resources/images/adiciona.png" style="width: 150; height: 30px;" /></a>
-										</button>
-									</form>
+									<a href="cadfavusu?idusuario2=${usuarios.id}"> <i class="fa fa-building-o" style="color: black"></i> </a>
 								</td>
 
 								<td align="center">

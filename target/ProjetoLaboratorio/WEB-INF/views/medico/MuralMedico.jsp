@@ -93,9 +93,10 @@
                             <td>${posts.titulo}</td>
                             <td>${posts.texto}</td>
                             <td align="center">
-                                <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o"></i> </a>
+                                <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o" style="color: black"></i> </a>
                             </td>
                             <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
+
 
                         </tr>
                     </c:forEach>
@@ -165,5 +166,100 @@
 <script src="resources/js/morris/chart-data-morris.js"></script>
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
+<script src="resources/js/jquery-1.9.js"></script>
+<script src="resources/js//bootstrap.js"></script>
+<script src="resources/js/bootstrap-confirmation.js"></script>
+<script src="resources/js/bootstrap-confirmation.min.js"></script>
+<script src="resources/js/Gruntfile.js"></script>
+<script>
+    $('[data-toggle=confirmation]').confirmation({
+        rootSelector: '[data-toggle=confirmation]',
+        // other options
+    });
+</script>
+
+<script>
+    console.log('Bootstrap ' + $.fn.tooltip.Constructor.VERSION);
+    console.log('Bootstrap Confirmation ' + $.fn.confirmation.Constructor.VERSION);
+
+    $('[data-toggle=confirmation]').confirmation({
+        rootSelector: '[data-toggle=confirmation]',
+        container: 'body'
+    });
+    $('[data-toggle=confirmation-singleton]').confirmation({
+        rootSelector: '[data-toggle=confirmation-singleton]',
+        container: 'body'
+    });
+    $('[data-toggle=confirmation-popout]').confirmation({
+        rootSelector: '[data-toggle=confirmation-popout]',
+        container: 'body'
+    });
+
+    $('#confirmation-delegate').confirmation({
+        selector: 'button'
+    });
+
+    var currency = '';
+    $('#custom-confirmation').confirmation({
+        rootSelector: '#custom-confirmation',
+        container: 'body',
+        title: null,
+        onConfirm: function(currency) {
+            alert('You choosed ' + currency);
+        },
+        buttons: [
+            {
+                class: 'btn btn-danger',
+                icon: 'glyphicon glyphicon-usd',
+                value: 'US Dollar'
+            },
+            {
+                class: 'btn btn-primary',
+                icon: 'glyphicon glyphicon-euro',
+                value: 'Euro'
+            },
+            {
+                class: 'btn btn-warning',
+                icon: 'glyphicon glyphicon-bitcoin',
+                value: 'Bitcoin'
+            },
+            {
+                class: 'btn btn-default',
+                icon: 'glyphicon glyphicon-remove',
+                cancel: true
+            }
+        ]
+    });
+
+    $('#custom-confirmation-links').confirmation({
+        rootSelector: '#custom-confirmation-link',
+        container: 'body',
+        title: null,
+        buttons: [
+            {
+                label: 'Twitter',
+                attr: {
+                    href: 'https://twitter.com'
+                }
+            },
+            {
+                label: 'Facebook',
+                attr: {
+                    href: 'https://facebook.com'
+                }
+            },
+            {
+                label: 'Pinterest',
+                attr: {
+                    href: 'https://pinterest.com'
+                }
+            }
+        ]
+    });
+</script>
+
+<script>
+    document.write('<script src="//' + location.host.split(':')[0] + ':35729/livereload.js" async defer><' + '/script>');
+</script>
 </body>
 </html>

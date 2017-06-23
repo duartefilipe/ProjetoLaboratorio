@@ -62,6 +62,11 @@
             </div>
           </div>
 
+            <div class="field-wrap">
+              <label> Email <span class="req">*</span> </label>
+              <input type="text" name="email" required autocomplete="off"/>
+            </div>
+
           <div class="field-wrap">
             <label> Login <span class="req">*</span> </label>
             <input type="text" name="login" required autocomplete="off"/>

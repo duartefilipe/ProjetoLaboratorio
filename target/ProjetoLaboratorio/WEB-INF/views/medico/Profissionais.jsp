@@ -83,8 +83,17 @@
 
 
 
+
 		<div id="page-wrapper">
 			<div class="row">
+				<c:if test="${msg!=null}">
+					<div class="alert alert-success">
+						<strong>>${msg}</strong>
+					</div>
+					<div class="alert alert-success" role="alert">
+						<strong>${msg}</strong>
+					</div>
+				</c:if>
 				<div class="table-responsive text-center">
 					<table class="table table-bordered table-hover table-striped tablesorter ">
 						<thead>
@@ -113,20 +122,14 @@
 								<td>${usuarios.trabant}</td>
 								<td>${usuarios.nota} </td>
 								<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-building-o"></i> </a>
+									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-building-o" style="color: black"></i> </a>
 								</td>
 								<td align="center">
-									<form action="CadastrarFavorito" method="post">
-										<input type="hidden" name="idusuario2" value="${usuarios.id }">
-									<!--	<img href="#" src="resources/images/adiciona.png" style="width: 150; height: 30px;" />  -->
-										<button type="submit" class="">
-										<a type="submit"><img href="#" src="resources/images/adiciona.png" style="width: 150; height: 30px;" /></a>
-										</button>
-									</form>
+									<a href="cadfav?idusuario2=${usuarios.id}"> <i class="fa fa-building-o" style="color: black"></i> </a>
 								</td>
 
 								<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModalEmail('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
+									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModalEmail('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><i class="fa fa-building-o" style="color: black"></i></a>
 								</td>
 							</tr>
 						</c:forEach>

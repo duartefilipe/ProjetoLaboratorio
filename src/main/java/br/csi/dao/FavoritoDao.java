@@ -33,6 +33,28 @@ public class FavoritoDao {
         }
         return retorno;
     }
+
+    public boolean cadfav(int idusuario2, int idusuario) throws SQLException {
+        Connection c = null;
+        PreparedStatement stmt = null;
+        boolean retorno = false;
+
+
+        try {
+            c = Connect.getConexao();
+            String sql="INSERT INTO favorito (idusuario1, idusuario2) values(?,?)";
+            stmt = c.prepareStatement(sql);
+            stmt.setInt(1, idusuario);
+            stmt.setInt(2, idusuario2);
+            stmt.execute();
+            stmt.close();
+            retorno = true;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return retorno;
+        }
+        return retorno;
+    }
     /*
        public ArrayList<Favorito> getFavoritos() throws ClassNotFoundException {
 

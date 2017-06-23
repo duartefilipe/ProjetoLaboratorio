@@ -80,6 +80,7 @@ public class UsuarioDao {
 		
 		String nome = u.getNome();
 		String sobrenome = u.getSobrenome();
+		String email = u.getEmail();
 		String login = u.getLogin();
 		String senha = u.getSenha();
 		String tipo = u.getTipo();
@@ -87,13 +88,14 @@ public class UsuarioDao {
 		
 		try {
 			c = Connect.getConexao();
-			String sql="INSERT INTO usuario (nome, sobrenome, login, senha, tipo) values(?,?,?,?,?)";
+			String sql="INSERT INTO usuario (nome, sobrenome, email, login, senha, tipo) values(?,?,?,?,?,?)";
 			stmt = c.prepareStatement(sql);
 			stmt.setString(1, nome);
 			stmt.setString(2, sobrenome);
-			stmt.setString(3, login);
-			stmt.setString(4, senha);
-			stmt.setString(5, tipo);
+			stmt.setString(3, email);
+			stmt.setString(4, login);
+			stmt.setString(5, senha);
+			stmt.setString(6, tipo);
 			
 			stmt.execute();
 			stmt.close();

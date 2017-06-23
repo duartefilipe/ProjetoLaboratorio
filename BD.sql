@@ -72,6 +72,15 @@ select*from usuario;
 select*from mural;
 select*from favorito;
 select*from avaliacao;
+select * from comentarioforummedico;
+select * from forummedico;
+
+delete from usuario where idusuario >= 0
+delete from favorito where idfavorito >= 0
+delete from avaliacao where idavaliacao >= 0
+delete from forummedico where idforummedico >= 0
+delete from comentarioforummedico where idcomentarioforummedico >= 0
+delete from mural where idmural >= 0
 
 /*
 pra teste
