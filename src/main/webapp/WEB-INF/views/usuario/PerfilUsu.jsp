@@ -31,7 +31,6 @@
                         <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
 						<li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
 						<li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-						<li><a href="RedPostsForumUsuario"><i class="fa fa-edit"></i>  Meus Posts no Forum </a></li>
 						<li><a href="RedForumUsu">Forum</a></li>
                     </ul>
 
@@ -40,7 +39,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                                <li><a href="RedMuralUsuario"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
+                                <li><a href="RedMuralUsuario"><i class="fa fa-book"></i> Anuncios </a></li>
+								<li><a href="RedPostsForumUsuario"><i class="fa fa-inbox"></i> Posts no Forum </a></li>
                                 <li class="divider"></li>
                                 <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>

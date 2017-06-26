@@ -44,7 +44,7 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
                 <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
                 <li class="dropdown">
@@ -62,9 +62,9 @@
                     <ul class="dropdown-menu">
                         <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                         <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                        <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
-                        <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
+                        <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                        <li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i> Posts Forum Medico </a></li>
+                        <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i> Posts Forum Geral </a></li>
                         <li class="divider"></li>
                         <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                     </ul>
@@ -79,7 +79,6 @@
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>
-                        <th class="header headerSortUp text-center">ID</th>
                         <th class="header headerSortUp text-center">Titulo</th>
                         <th class="header headerSortUp text-center">Texto</th>
                         <th class="header headerSortUp text-center">Alterar Post</th>
@@ -89,11 +88,10 @@
                     <tbody>
                     <c:forEach var="posts" items="${posts}">
                         <tr>
-                            <td>${posts.idMural}</td>
                             <td>${posts.titulo}</td>
                             <td>${posts.texto}</td>
                             <td align="center">
-                                <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o" style="color: black"></i> </a>
+                                <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-edit" style="color: black"></i> </a>
                             </td>
                             <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
 

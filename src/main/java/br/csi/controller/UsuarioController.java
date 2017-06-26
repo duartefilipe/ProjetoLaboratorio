@@ -72,9 +72,10 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping ("CadastrarUsuario")
-	public String adiciona (Usuario usuario) throws ClassNotFoundException, SQLException{
+	public String adiciona (Usuario usuario, HttpServletRequest rq) throws ClassNotFoundException, SQLException{
 		boolean retorno = new UsuarioDao().cadastraUsuario(usuario);
 		if(retorno){
+			rq.setAttribute("mensagem", "Usuario cadastrado como favorito");
 			return "Login";
 		}else{
 			return "Login";

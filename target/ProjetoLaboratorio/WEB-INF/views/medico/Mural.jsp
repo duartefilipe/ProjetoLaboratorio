@@ -39,9 +39,9 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li ><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
-                <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
+                <li class="active"><a href="RedMural"><i class="fa fa-edit"></i> Anuncios</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -57,9 +57,9 @@
                     <ul class="dropdown-menu">
                         <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                         <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                        <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
-                        <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
+                        <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                        <li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i> Posts Forum Medico </a></li>
+                        <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i> Posts Forum Geral </a></li>
                         <li class="divider"></li>
                         <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                     </ul>
@@ -69,17 +69,24 @@
     </nav>
 
     <div id="page-wrapper">
-        <div class="row">
 
-            <div class="jumbotron" style="padding-top: 1px">
-                <h3 align="center"><u><b>Anuncios</b></u></h3>
-                <p align="right">
-                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadmur" style="color: black"> Criar  </a>
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> Anuncios
+                </li>
+            </ol>
+        </div>
+
+        <div class="row">
+            <div class="jumbotron" style="padding-top: 1px; background-color: white">
+                <p align="left">
+                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadmur" style="color: black"> Criar Anuncio </a>
                 </p>
 
                 <c:forEach var="posts" items="${posts}">
 
-                    <div class="thumbnail">
+                    <div class="thumbnail" style=" background-color: #e0e0e0">
                         <input type="hidden" name="posts" value="${posts.idUsuario }">
                         <input type="hidden" name="posts" value="${posts.nome }">
                         <input type="hidden" name="posts" value="${posts.email }">

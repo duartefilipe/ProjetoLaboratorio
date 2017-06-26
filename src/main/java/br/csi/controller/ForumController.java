@@ -84,6 +84,29 @@ public class ForumController {
 		}
 	}
 
+	@RequestMapping("RemoverPostForumMedicoGeral")
+	public String DeletaPostForumMedicoGeral(int id , HttpServletRequest rq) throws SQLException, Exception{
+
+		ForumMedicoDao fmD = new ForumMedicoDao();
+
+
+		System.out.println("post forum medico :  "+id);
+
+		boolean retorno = fmD.RemoverComentForum(id);
+		boolean retorno2 = fmD.RemoverPostForum(id);
+
+		if(retorno && retorno2){
+			rq.setAttribute("postsforum", fmD.getPostsForumMedico());
+			return "medico/PostsForumMedicoGeral";
+		}else{
+			rq.setAttribute("msg","roblema pra excluir");
+			return "medico/PostsForumMedicoGeral";
+		}
+	}
+
+
+
+
 	@RequestMapping("RemoverPostForumUsuario")
 	public String DeletaPostForumUsuario(int id , HttpServletRequest rq) throws SQLException, Exception{
 

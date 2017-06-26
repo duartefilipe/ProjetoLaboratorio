@@ -76,9 +76,9 @@
                             <ul class="dropdown-menu">
                                 <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                                 <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                                <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                                <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
-                                <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
+                                <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                                <li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i>  Posts Forum Medico </a></li>
+                                <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i> Posts Forum Geral </a></li>
                                 <li class="divider"></li>
                                 <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
@@ -88,6 +88,15 @@
             </nav>
 
             <div id="page-wrapper">
+
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Home
+                        </li>
+                    </ol>
+                </div>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Favoritos </h2>
@@ -115,7 +124,7 @@
                                             </td>
                                             <!--<td align="center"><a href="#" data-toggle="modal" data-target="#myModal_${favId.idusuario2}"><img src="resources/images/email.png" style="width:150; height:30px;" /></a></td>-->
                                             <!--<td align="center"><a href="#" data-toggle="modal" data-target="#modalemail"><img src="resources/images/email.png" style="width:150; height:30px;" /></a></td>-->
-                                            <td align="center"><a href="RemoverFavorito?idusuario2=${favId.idusuario2}"><i class="fa fa-close" style="color: black"></i></a></td>
+                                            <td align="center"><a href="RemoverFavorito?idusuario2=${favId.idusuario2}"><i class="fa fa-trash" style="color: black"></i></a></td>
                                         </tr>
                                     </c:forEach>
 

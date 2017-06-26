@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html >
 <head>
@@ -27,7 +28,7 @@
       
         <div id="login">
           <h1>Bem Vindo!</h1>
-          
+
           <form action="login" method="post">
             <div class="field-wrap">
             <label> Login <span class="req"></span></label>
@@ -100,6 +101,29 @@
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
+
+  <!-- modal aviso cadastro inicio -->
+
+  <div class="modal fade" id="modalacadaviso" tabindex="-1" role="dialog" aria-labelledby="myModalcadaviso">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalcadaviso">Realizar Avaliaçao</h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal aviso cadastro fim -->
+
+
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="resources/js/index.js"></script>

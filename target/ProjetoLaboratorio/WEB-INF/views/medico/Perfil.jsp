@@ -28,13 +28,13 @@
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                        <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
+                        <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
+                        <li><a href="RedMural"><i class="fa fa-edit"></i> Anuncios </a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Fórum <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Médicos</a></li>
+                                <li><a href="RedForum">Médicos</a></li>
                                 <li><a href="RedForumGeral">Geral</a></li>
                             </ul>
                         </li>
@@ -44,25 +44,28 @@
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
+                                <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                                 <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                                <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                                <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
-                                <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
+                                <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                                <li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i>  Posts Forum Medico </a></li>
+                                <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i> Posts Forum Geral </a></li>
                                 <li class="divider"></li>
                                 <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div><!-- /.navbar-collapse -->
             </nav>
 
             <div id="page-wrapper">
+
                 <div class="row">
                     <ol class="breadcrumb">
-                    	<li class="active"><i class="fa fa-dashboard"></i> Perfil </li>
-                	</ol>
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Perfil
+                        </li>
+                    </ol>
                 </div>
-            </div>
 
 			<div class="list-group">
 				<nav class="navbar navbar-default navbar-static-top">

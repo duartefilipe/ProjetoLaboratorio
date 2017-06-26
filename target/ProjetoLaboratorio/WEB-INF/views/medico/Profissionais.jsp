@@ -76,9 +76,9 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-							<li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-							<li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
-							<li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
+							<li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+							<li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i>  Posts Forum Medico </a></li>
+							<li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i> Posts Forum Geral </a></li>
 							<li class="divider"></li>
 							<li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
 						</ul>
@@ -92,6 +92,17 @@
 
 
 		<div id="page-wrapper">
+
+			<div class="row">
+				<ol class="breadcrumb">
+					<li class="active">
+						<i class="fa fa-dashboard"></i> Profissionais
+					</li>
+				</ol>
+			</div>
+
+
+
 			<div class="row">
 				<c:if test="${msg!=null}">
 					<div class="alert alert-success">

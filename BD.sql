@@ -43,13 +43,14 @@ select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuari
 
 insert into avaliacao (nota, idusuatrib, idusurec) values (5, 2, 1)
 
-select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+select usuario.idusuario, cast(avg(nota) as numeric (3,2)) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
   usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
-      from usuario, usuario as u2, avaliacao
-        where usuario.idusuario = avaliacao.idusuatrib
-          and avaliacao.idusurec = u2.idusuario
-            group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
-            usuario.trabatual, usuario.trabant, usuario.email
+from usuario, usuario as u2, avaliacao
+where usuario.idusuario = avaliacao.idusuatrib
+      and avaliacao.idusurec = u2.idusuario
+group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
+  usuario.trabatual, usuario.trabant, usuario.email
+
 
 select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
   usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email

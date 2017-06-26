@@ -55,8 +55,8 @@
                     <ul class="dropdown-menu">
                         <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                         <li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                        <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumUsuario"><i class="fa fa-edit"></i>  Meus Posts no Forum </a></li>
+                        <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                        <li><a href="RedPostsForumUsuario"><i class="fa fa-inbox"></i> Posts no Forum </a></li>
                         <li class="divider"></li>
                         <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
                     </ul>
@@ -83,7 +83,11 @@
                             <input type="hidden" name="idMural" value="${posts.idMural}">
                             <td>${posts.titulo}</td>
                             <td>${posts.texto}</td>
-                            <td><a href="#" data-toggle="modal" data-target="#modalaltera" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-building-o"></i> </a></td>
+                            <td>
+                                <a href="#" data-toggle="modal" data-target="#modalaltera" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')">
+                                    <i class="fa fa-edit" style="color: black"></i>
+                                </a>
+                            </td>
 
                             <td><a href="RemoverMuralUsuario?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
 

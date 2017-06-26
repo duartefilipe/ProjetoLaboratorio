@@ -61,8 +61,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="RedPerfilAltera?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
-                        <li><a href="RedMuralMedico"><i class="fa fa-edit"></i>  Meus Anuncios </a></li>
-                        <li><a href="RedPostsForumMedico"><i class="fa fa-edit"></i>  Meus Posts Forum Medico </a></li>
+                        <li><a href="RedMuralMedico"><i class="fa fa-book"></i> Anuncios </a></li>
+                        <li><a href="RedPostsForumMedico"><i class="fa fa-inbox"></i> Posts Forum Medico </a></li>
                         <li><a href="RedPostsForumMedicoGeral"><i class="fa fa-edit"></i>  Meus Posts Forum Geral </a></li>
                         <li class="divider"></li>
                         <li><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
@@ -73,22 +73,28 @@
     </nav>
 
 		<div id="page-wrapper">
-			<div class="row">
 
-				<div class="jumbotron" style="padding-top: 1px">
-                    <h2 align="center"><u>Forum dos Medico</u></h2>
-                    <br>
-                    <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Forum Medico
+                    </li>
+                </ol>
+            </div>
+
+			<div class="row">
+				<div class="jumbotron" style="padding-top: 1px; background-color: white"">
+                   <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
                     <br><br>
 
                     <c:forEach var="postsForum" items="${postsForum}">
-                        <div class="thumbnail">
+                        <div class="thumbnail" style="background-color: #e0e0e0">
                             <input type="hidden" name="idusuario" value="${postsForum.idusuario }">
                             <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
                             <h3>${postsForum.tituloForum}  </h3>
                             <hr>
                             <h4>${postsForum.textoForum}</h4>
-                            <p align="right"><a href="redRespForum?id=${postsForum.id}" style="color: black">responder</a></p>
+                            <p align="right"><a href="redRespForum?id=${postsForum.id}" style="color: #001c71">Visualizar</a></p>
                         </div>
                     </c:forEach>
 				</div>
