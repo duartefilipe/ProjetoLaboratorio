@@ -178,7 +178,7 @@ public class UsuarioDao {
 		Usuario usu;
 
 		try {
-			String sql = "select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
+			String sql = "select usuario.idusuario, cast(avg(nota) as numeric (3,1)) as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
 					"\tusuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
 					"      from usuario,  avaliacao\n" +
 					"        where avaliacao.idusurec = usuario.idusuario\n" +
@@ -204,6 +204,7 @@ public class UsuarioDao {
 				usu.setTrabant(rs.getString("trabant"));
 				usu.setEmail(rs.getString("email"));
 				usu.setNota(rs.getFloat("media"));
+
 
 				log.add(usu);
 				System.out.println("Nome Adicionado no Array = " +usu.getNome());

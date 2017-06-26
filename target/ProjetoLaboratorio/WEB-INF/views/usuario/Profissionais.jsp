@@ -12,10 +12,16 @@
 
 <title>LabMed</title>
 
-<link href="resources/css/bootstrap.css" rel="stylesheet">
-<link href="resources/css/sb-admin.css" rel="stylesheet">
-<link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/sb-admin.css" rel="stylesheet">
+	<link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+	<link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="resources/css/_all-skins.min.css">
+	<link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href=resources/css/ionicons.min.css">
 </head>
 
 <body>
@@ -79,11 +85,12 @@
 			<!-- /.row -->
 
 
-		</div>
-		<!-- /#wrapper -->
-
-
 			<div class="row">
+				<c:if test="${msg!=null}">
+					<div class="alert alert-success">
+						<strong>${msg}</strong>
+					</div>
+				</c:if>
 				<div class="table-responsive text-center">
 					<table class="table table-bordered table-hover table-striped tablesorter ">
 						<thead>
@@ -112,14 +119,14 @@
 								<td>${usuarios.trabant}</td>
 								<td>${usuarios.nota} </td>
 								<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-building-o"></i> </a>
+									<a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModal('${usuario.id}', '${usuarios.id}')"> <i class="fa fa-edit" style="color: black"></i> </a>
 								</td>
 								<td align="center">
-									<a href="cadfavusu?idusuario2=${usuarios.id}"> <i class="fa fa-building-o" style="color: black"></i> </a>
+									<a href="cadfavusu?idusuario2=${usuarios.id}"> <i class="fa fa-user-plus" style="color: black"></i> </a>
 								</td>
 
 								<td align="center">
-									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModalEmail('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
+									<a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModalEmail('${usuarios.email}', '${usuarios.nome}', '${usuarios.id }')"><i class="fa fa-envelope" style="color: black"></i></a>
 								</td>
 							</tr>
 						</c:forEach>
@@ -209,12 +216,23 @@
 						<input type="hidden" name="idusurec" id="idusurec" value="idusurec">
 						<input type="hidden" name="idusuatrib" id="idusuatrib" value="idusuatrib">
 						<div class="form-group">
-							<label class="control-label col-sm-2" >Nota:</label>
-							<div class="col-sm-10">
-								<input class="form-control" name="nota"  placeholder="Digite aqui sua nota para este profissional"/>
+							<div class="row">
+								<div class="col-md-3">	<label >Escolha uma nota:</label> </div>
+								<div class="col-md-5">
+									<select class="form-control" name="nota">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<button type="submit" class="btn btn-default">Avaliar</button>
+								</div>
 							</div>
+<br>
 						</div>
-						<button type="submit" class="btn btn-default">Avaliar</button>
 
 					</form>
 				</div>

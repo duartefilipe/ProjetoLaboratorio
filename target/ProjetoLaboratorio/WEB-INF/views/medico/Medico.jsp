@@ -19,6 +19,14 @@
         <link href="resources/css/sb-admin.css" rel="stylesheet">
         <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+        <link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="resources/css/_all-skins.min.css">
+        <link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href=resources/css/ionicons.min.css">
+
+
 
     </head>
 
@@ -103,11 +111,11 @@
                                             <td>${favId.sobrenome}</td>
                                             <td>${favId.tipo}</td>
                                             <td align="center">
-                                                <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
+                                                <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><i class="fa fa-envelope-o" style="color: black"></i></a>
                                             </td>
                                             <!--<td align="center"><a href="#" data-toggle="modal" data-target="#myModal_${favId.idusuario2}"><img src="resources/images/email.png" style="width:150; height:30px;" /></a></td>-->
                                             <!--<td align="center"><a href="#" data-toggle="modal" data-target="#modalemail"><img src="resources/images/email.png" style="width:150; height:30px;" /></a></td>-->
-                                            <td align="center"><a href="RemoverFavorito?idusuario2=${favId.idusuario2}"><img src="resources/images/excluir.png" style="width:150; height:30px;" /></a></td>
+                                            <td align="center"><a href="RemoverFavorito?idusuario2=${favId.idusuario2}"><i class="fa fa-close" style="color: black"></i></a></td>
                                         </tr>
                                     </c:forEach>
 
@@ -213,6 +221,7 @@
 <script src="resources/js/morris/chart-data-morris.js"></script>
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
+
 
 
 </body>

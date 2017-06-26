@@ -18,6 +18,12 @@
     <link href="resources/css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="resources/css/_all-skins.min.css">
+    <link rel="stylesheet" href="resources/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href=resources/css/ionicons.min.css">
 </head>
 
 <body>
@@ -71,17 +77,17 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <ol class="breadcrumb">
-                <li class="active"><i class="fa fa-dashboard"></i> Home</li>
-            </ol>
-        </div>
-    </div>
-    <!-- /.row -->
-
 
     <div id="page-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <ol class="breadcrumb">
+                    <li class="active"><i class="fa fa-dashboard"></i> Home </li>
+                </ol>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-6">
                 <h2>Favoritos </h2>
@@ -105,9 +111,9 @@
                                 <td>${favId.sobrenome}</td>
                                 <td>${favId.tipo}</td>
                                 <td align="center">
-                                    <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><img src="resources/images/email.png" style="width:150; height:30px;" /></a>
+                                    <a href="#" data-toggle="modal" data-target="#modalemail" onclick="setaDadosModal('${favId.email}', '${favId.nome}', ${favId.idusuario2 })"><i class="fa fa-envelope-o" style="color: black"></i></a>
                                 </td>
-                                <td align="center"><a href="RemoverFavoritoUsu?idusuario2=${favId.idusuario2}"><img src="resources/images/excluir.png" style="width:150; height:30px;" /></a></td>
+                                <td align="center"><a href="RemoverFavoritoUsu?idusuario2=${favId.idusuario2}"><i class="fa fa-close" style="color: black"></i></a></td>
                             </tr>
                         </c:forEach>
 
