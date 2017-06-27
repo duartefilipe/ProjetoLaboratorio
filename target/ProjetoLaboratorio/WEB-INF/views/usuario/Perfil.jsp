@@ -35,10 +35,10 @@
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                         <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
                         <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                        <li><a href="RedForumUsu">Forum</a></li>
+                        <li><a href="RedForumUsu"> <i class="fa fa-caret-square-o-down"></i> Forum</a></li>
                     </ul>
 
 
@@ -59,19 +59,20 @@
             </nav>
 
             <div id="page-wrapper">
+
                 <div class="row">
                     <ol class="breadcrumb">
-                    	<li class="active"><i class="fa fa-dashboard"></i> Perfil </li>
-                	</ol>
+                        <li class="active"  style="color: black">
+                            <i class="fa fa-user"></i> Perfil
+                        </li>
+                    </ol>
                 </div>
-            </div>
 
-			<div class="list-group">
-				<nav class="navbar navbar-default navbar-static-top">
-					<div class="container">
+                <div class="list-group">
+                    <nav class="navbar navbar-default navbar-static-top">
+                        <div class="container">
 						<form action="AlterarUsuario" method="post">
 							<div class="form-group">
-								<h2 align="center">Perfil </h2>
 								<input type="hidden" name="id" value="${usuario.id }">
 								<label>Nome:</label>
 								<input class="form-control" type="text" name="nome" value="${usuario.nome }"/>
@@ -107,17 +108,18 @@
 
 							</div>
 						</form>
-					</div>
-				</nav>
-			</div>
-		</div>
+                            </div>
+                    </nav>
+                </div>
+            </div>
 
-		</div>
+        </div>
 
-	</div><!-- /#page-wrapper -->
+    </div><!-- /#page-wrapper -->
 
 
-<!-- JavaScript -->
+
+    <!-- JavaScript -->
 <script src="resources/js/jquery-1.10.2.js"></script>
 <script src="resources/js/bootstrap.js"></script>
 

@@ -43,10 +43,10 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
                 <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                <li><a href="RedForumUsu">Forum</a></li>
+                <li><a href="RedForumUsu"> <i class="fa fa-caret-square-o-down"></i> Forum</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-user">
@@ -66,10 +66,17 @@
     </nav>
 
     <div id="page-wrapper">
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="active" style="color: black">
+                    <i class="fa fa-inbox"></i> Posts do forum
+                </li>
+            </ol>
+        </div>
+
         <div class="row">
             <div class="table-responsive text-center">
-                <h2 align="center">Gerenciar meus Posts no forum </h2>
-                <hr>
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>

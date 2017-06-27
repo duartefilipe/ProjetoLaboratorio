@@ -56,7 +56,7 @@
                     <a class="navbar-brand" href="RedMedico">LabMed</a>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="collapse navbar-collapse navbar-ex1-collapse" >
                     <ul class="nav navbar-nav side-nav">
                         <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
                         <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
@@ -91,7 +91,7 @@
 
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li class="active">
+                        <li class="active" style="color: black">
                             <i class="fa fa-dashboard"></i> Home
                         </li>
                     </ol>
@@ -100,7 +100,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Favoritos </h2>
-                        <div class="table-responsive">
+                        <div class="table-responsive" >
                             <table class="table table-bordered table-hover tablesorter text-center" >
                                 <thead>
                                     <tr>
@@ -134,11 +134,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <h2>Anuncios</h2>
-                        <div class="jumbotron">
+                        <h2 align="center">Anuncios recentes</h2>
+                        <div class="jumbotron" style="padding-top: 1px; background-color: white">
                             <c:forEach var="posts" items="${posts}">
 
-                                <div class="thumbnail">
+                                <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black">
                                     <input type="hidden" name="posts" value="${posts.idUsuario }">
                                     <p>
                                     <h3>
@@ -146,7 +146,7 @@
                                     </h3>
                                     </p>
                                     <hr>
-                                    <p>${posts.texto}.</p>
+                                    <p>${posts.texto}...</p>
                                 </div>
 
                             </c:forEach>
@@ -186,7 +186,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" >Destinatario:</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
+                                <input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
                             </div>
                         </div>
 

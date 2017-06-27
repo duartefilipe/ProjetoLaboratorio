@@ -155,6 +155,22 @@ public class RedirectController {
 		return "medico/ForumRespostas";
 	}
 
+	@RequestMapping ("redRespForumGeral")
+	public String redirectRespForumMedicoGeral(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+
+		int id = Integer.parseInt(rq.getParameter("id"));
+
+		System.out.println("AQUI NO REDIRECT forum "+id);
+
+		ForumMedico fm = new ForumMedico();
+		ForumMedicoDao cmD = new ForumMedicoDao();
+
+		fm = cmD.pesquisaForumMedico(id);
+
+		rq.setAttribute("forum", fm);
+		return "medico/ForumRespostasGeral";
+	}
+
 	@RequestMapping ("redRespForumUsu")
 	public String redirectRespForumUsuario(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
 

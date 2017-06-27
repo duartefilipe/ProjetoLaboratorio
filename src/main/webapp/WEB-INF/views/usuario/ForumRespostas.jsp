@@ -44,7 +44,7 @@
                     <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                     <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
                     <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                    <li><a href="RedForumUsu">Forum</a></li>
+                    <li><a href="RedForumUsu"> <i class="fa fa-caret-square-o-down"></i> Forum</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right navbar-user">
@@ -64,23 +64,27 @@
         </nav>
 
         <div id="page-wrapper">
+
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li class="active" style="color: black">
+                        <i class="fa fa-caret-square-o-down"></i> Respostas
+                    </li>
+                </ol>
+            </div>
             <div class="row">
 
-                <div class="jumbotron" style="padding-top: 1px">
-                    <h2 align="center"><u>Forum Medico</u></h2>
-                    <br>
-                    <br><br>
-
-                        <div class="thumbnail">
+                <div class="jumbotron" style="padding-top: 1px; background-color: white">
+                        <div class="thumbnail"style=" background-color: #e0e0e0; border-color: black">
                             <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
 
-                            <h3>${forum.tituloForum }  </h3>
+                            <h3> ${forum.tituloForum }  </h3>
                             <hr>
-                            <h4>${forum.textoForum}</h4>
+                            <h4> ${forum.textoForum}</h4>
                             <br>
                             <hr>
-                            <p align="center"><u>respostas</u></p>
-                            <p align="left"> <a href="" style="color: black" data-toggle="modal" data-target="#modalcadcoment"> Responder </a></p>
+                            <p align="center"><u>Respostas</u></p>
+                            <p align="left"> <a href="#" class="btn btn-primary" style="color: white" data-toggle="modal" data-target="#modalcadcoment"> Responder </a></p>
                             <c:forEach var="respsForum" items="${respsForum}">
                                 <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">

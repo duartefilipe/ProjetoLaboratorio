@@ -39,10 +39,10 @@
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                         <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
                         <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                        <li><a href="RedForumUsu">Forum</a></li>
+                        <li class="active"><a href="RedForumUsu"> <i class="fa fa-caret-square-o-down"></i> Forum</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right navbar-user">
@@ -61,23 +61,30 @@
                 </div><!-- /.navbar-collapse -->
             </nav>
 
-		<div id="page-wrapper">
+            <div id="page-wrapper">
+
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li class="active" style="color: black">
+                            <i class="fa fa-caret-square-o-down"></i> Forum Medico
+                        </li>
+                    </ol>
+                </div>
+
 			<div class="row">
 
-                <div class="jumbotron" style="padding-top: 1px">
-                    <h2 align="center"><u>Forum</u></h2>
-                    <br>
-                    <button type="button" class="btn btn-md btn-default" href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
+                <div class="jumbotron" style="padding-top: 1px; background-color: white">
+                    <button type="button" class="btn btn-success" href="#" data-toggle="modal" data-target="#modalcadformed">Criar novo Post no forum</button>
                     <br><br>
 
                     <c:forEach var="postsForum" items="${postsForum}">
-                        <div class="thumbnail">
+                        <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black">
                             <input type="hidden" name="idusuario" value="${postsForum.idusuario }">
                             <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
                             <h3>${postsForum.tituloForum}  </h3>
                             <hr>
                             <h4>${postsForum.textoForum}</h4>
-                            <p align="right"><a href="redRespForumUsu?id=${postsForum.id}" style="color: black">responder</a></p>
+                            <p align="right"><a href="redRespForumUsu?id=${postsForum.id}" style="color: #001c71">Visualizar</a></p>
                         </div>
                     </c:forEach>
 				</div>

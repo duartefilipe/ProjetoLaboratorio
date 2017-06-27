@@ -72,8 +72,8 @@
 
         <div class="row">
             <ol class="breadcrumb">
-                <li class="active">
-                    <i class="fa fa-dashboard"></i> Anuncios
+                <li class="active" style="color: black">
+                    <i class="fa fa-edit"></i> Anuncios
                 </li>
             </ol>
         </div>
@@ -81,12 +81,12 @@
         <div class="row">
             <div class="jumbotron" style="padding-top: 1px; background-color: white">
                 <p align="left">
-                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadmur" style="color: black"> Criar Anuncio </a>
+                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalcadmur" style="color: white"> Criar Anuncio </a>
                 </p>
 
                 <c:forEach var="posts" items="${posts}">
 
-                    <div class="thumbnail" style=" background-color: #e0e0e0">
+                    <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black" >
                         <input type="hidden" name="posts" value="${posts.idUsuario }">
                         <input type="hidden" name="posts" value="${posts.nome }">
                         <input type="hidden" name="posts" value="${posts.email }">
@@ -100,7 +100,7 @@
                         <hr>
                         <div class="container">
                             <div class="row text-right">
-                                <div class="btn btn-default" data-toggle="modal" data-target="#modalemail"  onclick="setaDadosModal('${posts.email }', '${posts.nome }' , ${posts.idUsuario})"> Enviar Email </div>
+                                <div class="btn btn-primary" data-toggle="modal" data-target="#modalemail"  onclick="setaDadosModal('${posts.email }', '${posts.nome }' , ${posts.idUsuario})"> Enviar Email </div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" >Destinatario:</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
+                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
                         </div>
                     </div>
 

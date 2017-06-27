@@ -61,8 +61,8 @@
 
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li class="active">
-                            <i class="fa fa-dashboard"></i> Perfil
+                        <li class="active"  style="color: black">
+                            <i class="fa fa-user"></i> Perfil
                         </li>
                     </ol>
                 </div>
@@ -72,7 +72,6 @@
 					<div class="container">
 						<form action="AlterarMedico" method="post">
 							<div class="form-group">
-								<h2 align="center">Perfil </h2>
 								<input type="hidden" name="id" value="${usuario.id }">
 								<label>Nome:</label>
 								<input class="form-control" type="text" name="nome" value="${usuario.nome }"/>

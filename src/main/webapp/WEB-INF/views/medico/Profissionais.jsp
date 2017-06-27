@@ -95,8 +95,8 @@
 
 			<div class="row">
 				<ol class="breadcrumb">
-					<li class="active">
-						<i class="fa fa-dashboard"></i> Profissionais
+					<li class="active" style="color: black">
+						<i class="fa fa-table"></i> Profissionais
 					</li>
 				</ol>
 			</div>
@@ -183,7 +183,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-2" >Destinatario:</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
+								<input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
 							</div>
 						</div>
 

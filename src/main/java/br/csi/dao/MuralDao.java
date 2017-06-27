@@ -98,7 +98,7 @@ public class MuralDao {
         Mural m = null;
 
         try {
-            String sql = "SELECT * FROM mural ORDER BY idmural DESC LIMIT 2";
+            String sql = "SELECT idmural, idusuario, titulo, substring(texto, 1, 100) as texto FROM mural ORDER BY idmural DESC LIMIT 2";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -126,6 +126,7 @@ public class MuralDao {
 
         try {
             String sql = "SELECT * FROM mural where idusuario = '"+id+"' ORDER BY idmural DESC ";
+            //String sql = "SELECT idmural, idusuario, titulo, substring(texto, 1, 50) as texto FROM mural where idusuario = '"+id+"' ORDER BY idmural DESC\n";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 

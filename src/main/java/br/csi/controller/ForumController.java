@@ -54,6 +54,16 @@ public class ForumController {
 		}
 	}
 
+	@RequestMapping ("CadastrarComentForumMedicoGeral")
+	public String cadastraComentarioForumMedicoGeral (ComentarioMedico cm) throws ClassNotFoundException, SQLException{
+		boolean retorno = new ForumMedicoDao().CadastrarComentForumMedico(cm);
+		if(retorno){
+			return "medico/ForumGeral";
+		}else{
+			return "medico/ForumGeral";
+		}
+	}
+
 	@RequestMapping ("CadastrarComentForumUsuario")
 	public String cadastraComentarioForumUsuario (ComentarioMedico cm) throws ClassNotFoundException, SQLException{
 		boolean retorno = new ForumMedicoDao().CadastrarComentForumMedico(cm);

@@ -79,11 +79,10 @@
                 </ol>
             </div>
 
-
             <div class="row">
 
                 <div class="jumbotron" style="padding-top: 1px; background-color: white">
-                        <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black">
+                    <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black">
                             <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
 
                             <h3>Titulo: ${forum.tituloForum }  </h3>
@@ -92,7 +91,7 @@
                             <br>
                             <hr>
                             <p align="center"><u>Respostas</u></p>
-                            <p align="left"> <a href="#" class="btn btn-primary" style="color: white" data-toggle="modal" data-target="#modalcadcoment"> Responder </a></p>
+                            <p align="left"> <a href="" class="btn btn-primary" style="color: white" data-toggle="modal" data-target="#modalcadcoment"> Responder </a></p>
                             <c:forEach var="respsForum" items="${respsForum}">
                                 <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
@@ -144,7 +143,7 @@
                     <h4 class="modal-title" id="myModalcadcomentmed">Comentar</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="CadastrarComentForumMedico" method="post">
+                    <form action="CadastrarComentForumMedicoGeral" method="post">
                         <input type="hidden" name="idusuario" value="${usuario.id}">
                         <input type="hidden" name="idpostforummedico" value="${forum.id}">
 

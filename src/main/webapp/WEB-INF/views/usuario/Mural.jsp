@@ -39,10 +39,10 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="RedUsu"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li><a href="RedProfissionaisUsu"><i class="fa fa-table"></i> Profissionais</a></li>
-                <li><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
-                <li><a href="RedForumUsu">Forum</a></li>
+                <li class="active"><a href="RedMuralUsu"><i class="fa fa-edit"></i> Anuncios</a></li>
+                <li><a href="RedForumUsu"> <i class="fa fa-caret-square-o-down"></i> Forum</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-user">
@@ -62,17 +62,25 @@
     </nav>
 
     <div id="page-wrapper">
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="active"  style="color: black">
+                    <i class="fa fa-book"></i> Anuncios
+                </li>
+            </ol>
+        </div>
+
         <div class="row">
 
-            <div class="jumbotron" style="padding-top: 1px">
-                <h3 align="center"><u><b>Anuncios</b></u></h3>
-                <p align="right">
-                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modalcadmur" style="color: black"> Criar  </a>
+            <div class="jumbotron" style="padding-top: 1px; background-color: white">
+                <p align="left">
+                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalcadmur" style="color: white"> Criar anuncio  </a>
                 </p>
 
                 <c:forEach var="posts" items="${posts}">
 
-                    <div class="thumbnail">
+                    <div class="thumbnail" style=" background-color: #e0e0e0; border-color: black">
                         <input type="hidden" name="posts" value="${posts.idUsuario }">
                         <input type="hidden" name="posts" value="${posts.nome }">
                         <input type="hidden" name="posts" value="${posts.email }">
@@ -82,11 +90,11 @@
                         </h3>
                         </p>
                         <hr>
-                        <p>${posts.texto}.</p>
+                        <p> ${posts.texto}.</p>
                         <hr>
                         <div class="container">
                             <div class="row text-right">
-                                <div class="btn btn-default" data-toggle="modal" data-target="#modalemail"  onclick="setaDadosModal('${posts.email }', '${posts.nome }' , ${posts.idUsuario})"> Enviar Email </div>
+                                <div class="btn btn-primary" data-toggle="modal" data-target="#modalemail"  onclick="setaDadosModal('${posts.email }', '${posts.nome }' , ${posts.idUsuario})"> Enviar Email </div>
                             </div>
                         </div>
                     </div>

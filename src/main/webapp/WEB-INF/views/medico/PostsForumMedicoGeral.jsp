@@ -74,10 +74,18 @@
     </nav>
 
     <div id="page-wrapper">
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="active" style="color: black">
+                    <i class="fa fa-edit"></i> Posts no forum geral
+                </li>
+            </ol>
+        </div>
+
+
         <div class="row">
             <div class="table-responsive text-center">
-                <h2 align="center">Gerenciar meus Posts no forum Geral</h2>
-                <hr>
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>

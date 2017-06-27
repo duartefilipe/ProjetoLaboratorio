@@ -74,8 +74,17 @@
     </nav>
 
     <div id="page-wrapper">
+
         <div class="row">
-            <div class="table-responsive text-center">
+            <ol class="breadcrumb">
+                <li class="active"  style="color: black">
+                    <i class="fa fa-book"></i> Meus anuncios
+                </li>
+            </ol>
+        </div>
+
+        <div class="row">
+            <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped tablesorter ">
                     <thead>
                     <tr>
@@ -88,12 +97,12 @@
                     <tbody>
                     <c:forEach var="posts" items="${posts}">
                         <tr>
-                            <td>${posts.titulo}</td>
-                            <td>${posts.texto}</td>
+                            <td align="center">${posts.titulo}</td>
+                            <td align="center">${posts.texto}</td>
                             <td align="center">
                                 <a href="#" data-toggle="modal" data-target="#modalavaliacao" onclick="setaDadosModalAltera('${posts.idMural}', '${posts.titulo}', '${posts.texto}')"> <i class="fa fa-edit" style="color: black"></i> </a>
                             </td>
-                            <td><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
+                            <td align="center"><a href="RemoverMuralMedico?idMural=${posts.idMural}"><i class="fa fa-remove" style="color: black"></i></a></td>
 
 
                         </tr>
