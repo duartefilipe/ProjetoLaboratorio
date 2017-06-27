@@ -2,49 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/MuralUsuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/MuralUsuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PostsForumUsuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PostsForumUsuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Forum.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumGeral.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumGeral.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/MuralMedico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/MuralMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Perfil.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Forum.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Forum.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/ForumRespostas.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Mural.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Mural.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/MuralUsuario.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/MuralUsuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Perfil.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Perfil.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/PerfilUsu.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/PerfilUsu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/PostsForumUsuario.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/PostsForumUsuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Profissionais.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Profissionais.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Usuario.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/usuario/Usuario.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +26,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Perfil.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-236">
+              <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -129,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PostsForumUsuario.jsp" />
@@ -140,13 +111,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
       </list>
     </option>
   </component>
@@ -1036,15 +1008,16 @@
       <workItem from="1498235307374" duration="4441000" />
       <workItem from="1498243895600" duration="7284000" />
       <workItem from="1498493669168" duration="18261000" />
-      <workItem from="1498520346668" duration="13841000" />
+      <workItem from="1498520346668" duration="14845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83191000" />
+    <option name="totallyTimeSpent" value="84195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1069,7 +1042,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3327869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1515,28 +1488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="88" column="14" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="88" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="136" column="41" lean-forward="false" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1569,22 +1524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="80" column="40" lean-forward="false" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1625,6 +1564,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="72" column="72" lean-forward="false" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="91" column="74" lean-forward="false" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="80" column="40" lean-forward="false" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
           <folding />
         </state>
       </provider>

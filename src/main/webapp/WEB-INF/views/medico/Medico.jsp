@@ -56,7 +56,7 @@
                     <a class="navbar-brand" href="RedMedico">LabMed</a>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse" >
+                <div class="collapse navbar-collapse navbar-ex1-collapse"   >
                     <ul class="nav navbar-nav side-nav">
                         <li class="active"><a href="RedMedico"><i class="fa fa-dashboard"></i> Home</a></li>
                         <li><a href="RedProfissionais"><i class="fa fa-table"></i> Profissionais</a></li>
@@ -70,7 +70,7 @@
                         </li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right navbar-user">
+                    <ul class="nav navbar-nav navbar-right navbar-user" >
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                             <ul class="dropdown-menu">

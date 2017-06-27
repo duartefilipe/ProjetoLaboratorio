@@ -89,7 +89,7 @@
 								<input class="form-control" type="text" name="login" value="${usuario.login}" />
 								<br />
 								<label>Senha:</label>
-								<input class="form-control" type="text" name="senha" value="${usuario.senha }" />
+								<input class="form-control" type="password" name="senha" value="${usuario.senha }" />
 								<br />
 								<label>Cidade:</label>
 								<input class="form-control" type="text" name="cidade" value="${usuario.cidade }" />
