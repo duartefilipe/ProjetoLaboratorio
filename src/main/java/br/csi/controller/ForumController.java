@@ -48,6 +48,7 @@ public class ForumController {
 	public String cadastraComentarioForumMedico (ComentarioMedico cm) throws ClassNotFoundException, SQLException{
 		boolean retorno = new ForumMedicoDao().CadastrarComentForumMedico(cm);
 		if(retorno){
+
 			return "medico/Forum";
 		}else{
 			return "medico/Forum";

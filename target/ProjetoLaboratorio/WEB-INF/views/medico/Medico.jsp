@@ -142,7 +142,7 @@
                                     <input type="hidden" name="posts" value="${posts.idUsuario }">
                                     <p>
                                     <h3>
-                                        <b> ${posts.titulo} </b>
+                                        <b> Titulo: ${posts.titulo} </b>
                                     </h3>
                                     </p>
                                     <hr>

@@ -88,7 +88,7 @@
 
                             <h3>Titulo: ${forum.tituloForum }  </h3>
                             <hr>
-                            <h4>Texto: ${forum.textoForum}</h4>
+                            <h4>${forum.textoForum}</h4>
                             <br>
                             <hr>
                             <p align="center"><u>Respostas</u></p>
@@ -97,7 +97,7 @@
                                 <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
                                     <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
-                                    <h3>${respsForum.comentarioforummedico}  </h3>
+                                    <p>${respsForum.comentarioforummedico}  </p>
                                     <hr>
                                 </div>
                             </c:forEach>

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,12 +29,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Perfil.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp">
+      <file leaf-file-name="Mural.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-236">
-              <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,9 +59,9 @@
       <find>.nav-</find>
       <find>.navbar-inverse</find>
       <find>redRespForum</find>
-      <find>CadastrarComentForumMedico</find>
       <find>CadastrarComentForumMedicoGeral</find>
       <find>getPostsForumGeral</find>
+      <find>CadastrarComentForumMedico</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.slimscroll.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
@@ -116,9 +119,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedicoGeral.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
       </list>
     </option>
   </component>
@@ -136,9 +140,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="30" />
-    <option name="width" value="1366" />
-    <option name="height" value="738" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -155,6 +158,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -401,9 +406,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -905,7 +908,7 @@
       <method />
     </configuration>
     <configuration default="false" name="TomCat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.771" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="BROWSER_ID" value="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ProjetoLaboratorio:war exploded">
@@ -1008,15 +1011,19 @@
       <workItem from="1498235307374" duration="4441000" />
       <workItem from="1498243895600" duration="7284000" />
       <workItem from="1498493669168" duration="18261000" />
-      <workItem from="1498520346668" duration="14845000" />
+      <workItem from="1498520346668" duration="15582000" />
+      <workItem from="1498564795914" duration="1861000" />
+      <workItem from="1498574573299" duration="2327000" />
+      <workItem from="1498592354254" duration="1421000" />
+      <workItem from="1498656675402" duration="792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84195000" />
+    <option name="totallyTimeSpent" value="91333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1039,10 +1046,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3327869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33193278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20437567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1117,11 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#316#317#0" expanded="false" />
-            <element signature="e#355#356#0" expanded="false" />
-            <element signature="e#387#388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,9 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,7 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="90518" lean-forward="false" selection-start-line="6" selection-start-column="90518" selection-end-line="6" selection-end-column="90518" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,7 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="41583" lean-forward="false" selection-start-line="0" selection-start-column="41583" selection-end-line="0" selection-end-column="41583" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="50806" lean-forward="false" selection-start-line="10" selection-start-column="50806" selection-end-line="10" selection-end-column="50806" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2416">
           <caret line="3" column="27303" lean-forward="false" selection-start-line="3" selection-start-column="27303" selection-end-line="3" selection-end-column="27303" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,7 +1263,7 @@
         <state relative-caret-position="311">
           <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="71" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1277,7 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4187" lean-forward="false" selection-start-line="0" selection-start-column="4187" selection-end-line="0" selection-end-column="4187" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,50 +1311,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="77" column="37" lean-forward="false" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="205" column="46" lean-forward="false" selection-start-line="205" selection-start-column="41" selection-end-line="205" selection-end-column="46" />
-          <folding>
-            <marker date="1498499011260" expanded="true" signature="489:537" ph="SELECT * FRO... usuario" />
-            <marker date="1498499011260" expanded="true" signature="2300:2384" ph="INSERT INTO usuario... " />
-            <marker date="1498499011260" expanded="true" signature="3061:3193" ph="UPDATE usuar... " />
-            <marker date="1498499011260" expanded="true" signature="3978:4110" ph="UPDATE usuar... " />
-            <marker date="1498499011260" expanded="true" signature="4953:5079" ph="select usuar... usuario" />
-            <marker date="1498499011260" expanded="true" signature="4953:5440" ph="select usuar... usuario" />
-            <marker date="1498499011260" expanded="true" signature="4953:5796" ph="select usuar... " />
-            <marker date="1498499011260" expanded="true" signature="4953:5797" ph="SELECT * FRO... usuario" />
-            <marker date="1498499011260" expanded="true" signature="5481:5766" ph="select usuar... usuario" />
-            <marker date="1498499011260" expanded="true" signature="5697:5765" ph="select * fro... avaliacao" />
-            <marker date="1498499011260" expanded="true" signature="6665:6706" ph="SELECT * FRO... usuario" />
-            <marker date="1498499011260" expanded="true" signature="7404:7443" ph="select * fro... usuario" />
-            <marker date="1498499011260" expanded="true" signature="8340:8379" ph="select * fro... usuario" />
-            <marker date="1498499011260" expanded="true" signature="9173:9211" ph="delete from " />
-            <marker date="1498499011260" expanded="true" signature="9561:9628" ph="insert into avaliacao... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="60" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="4042" column="14" lean-forward="true" selection-start-line="4042" selection-start-column="14" selection-end-line="4042" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,14 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1998">
           <caret line="157" column="34" lean-forward="false" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -1406,30 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="109" column="102" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="102" />
-          <folding>
-            <marker date="1498238299490" expanded="true" signature="769:811" ph="INSERT INTO forummedico... " />
-            <marker date="1498238299490" expanded="true" signature="769:841" ph="INSERT INTO forummedico... " />
-            <marker date="1498238299490" expanded="true" signature="1479:1572" ph="insert into comentarioforummedico... " />
-            <marker date="1498238299490" expanded="true" signature="2407:2482" ph="SELECT * FRO... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="3501:3577" ph="SELECT * FRO... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="4459:4881" ph="select idpos... comentarioforummedico" />
-            <marker date="1498238299490" expanded="true" signature="6323:6368" ph="SELECT * FRO... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="6323:6423" ph="SELECT * FRO... mural" />
-            <marker date="1498238299490" expanded="true" signature="7132:7233" ph="SELECT * FRO... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="7944:8045" ph="SELECT * FRO... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="8692:8737" ph="DELETE FROM " />
-            <marker date="1498238299490" expanded="true" signature="9074:9271" ph="delete from " />
-            <marker date="1498238299490" expanded="true" signature="9074:9272" ph="DELETE FROM " />
-            <marker date="1498238299490" expanded="true" signature="9584:9631" ph="select * fro... forummedico" />
-            <marker date="1498238299490" expanded="true" signature="10275:10337" ph="UPDATE forum... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/util/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1442,9 +1364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="928">
           <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,14 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1552,30 +1464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="86" column="31" lean-forward="true" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="72" column="72" lean-forward="false" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1594,9 +1482,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-236">
+        <state relative-caret-position="16">
           <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-863">
+          <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="34" />
+          <folding>
+            <marker date="1498499011260" expanded="true" signature="489:537" ph="SELECT * FRO... usuario" />
+            <marker date="1498499011260" expanded="true" signature="2300:2384" ph="INSERT INTO usuario... " />
+            <marker date="1498499011260" expanded="true" signature="3061:3193" ph="UPDATE usuar... " />
+            <marker date="1498499011260" expanded="true" signature="3978:4110" ph="UPDATE usuar... " />
+            <marker date="1498499011260" expanded="true" signature="4953:5079" ph="select usuar... usuario" />
+            <marker date="1498499011260" expanded="true" signature="4953:5440" ph="select usuar... usuario" />
+            <marker date="1498499011260" expanded="true" signature="4953:5796" ph="select usuar... " />
+            <marker date="1498499011260" expanded="true" signature="4953:5797" ph="SELECT * FRO... usuario" />
+            <marker date="1498499011260" expanded="true" signature="5481:5766" ph="select usuar... usuario" />
+            <marker date="1498499011260" expanded="true" signature="5697:5765" ph="select * fro... avaliacao" />
+            <marker date="1498499011260" expanded="true" signature="6665:6706" ph="SELECT * FRO... usuario" />
+            <marker date="1498499011260" expanded="true" signature="7404:7443" ph="select * fro... usuario" />
+            <marker date="1498499011260" expanded="true" signature="8340:8379" ph="select * fro... usuario" />
+            <marker date="1498499011260" expanded="true" signature="9173:9211" ph="delete from " />
+            <marker date="1498499011260" expanded="true" signature="9561:9628" ph="insert into avaliacao... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="75" column="56" lean-forward="false" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="278" column="0" lean-forward="true" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+          <folding>
+            <marker date="1498238299490" expanded="true" signature="769:811" ph="INSERT INTO forummedico... " />
+            <marker date="1498238299490" expanded="true" signature="769:841" ph="INSERT INTO forummedico... " />
+            <marker date="1498238299490" expanded="true" signature="1479:1572" ph="insert into comentarioforummedico... " />
+            <marker date="1498238299490" expanded="true" signature="2407:2482" ph="SELECT * FRO... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="3501:3577" ph="SELECT * FRO... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="4459:4881" ph="select idpos... comentarioforummedico" />
+            <marker date="1498238299490" expanded="true" signature="6323:6368" ph="SELECT * FRO... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="6323:6423" ph="SELECT * FRO... mural" />
+            <marker date="1498238299490" expanded="true" signature="7132:7233" ph="SELECT * FRO... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="7944:8045" ph="SELECT * FRO... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="8692:8737" ph="DELETE FROM " />
+            <marker date="1498238299490" expanded="true" signature="9074:9271" ph="delete from " />
+            <marker date="1498238299490" expanded="true" signature="9074:9272" ph="DELETE FROM " />
+            <marker date="1498238299490" expanded="true" signature="9584:9631" ph="select * fro... forummedico" />
+            <marker date="1498238299490" expanded="true" signature="10275:10337" ph="UPDATE forum... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-993">
+          <caret line="48" column="64" lean-forward="false" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="144" column="52" lean-forward="false" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
