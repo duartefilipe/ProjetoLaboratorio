@@ -198,7 +198,7 @@
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-								<button type="submit" class="btn btn-default" id="enviar">Enviar</button>
+								<button type="submit" class="btn btn-success" id="enviar">Enviar</button>
 							</div>
 						</div>
 

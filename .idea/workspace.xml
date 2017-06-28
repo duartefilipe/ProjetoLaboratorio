@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/ForumRespostas.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" afterPath="$PROJECT_DIR$/target/ProjetoLaboratorio/WEB-INF/views/medico/Medico.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +30,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Mural.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
+      <file leaf-file-name="Usuario.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="177" column="123" lean-forward="false" selection-start-line="177" selection-start-column="123" selection-end-line="177" selection-end-column="123" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,15 +102,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/RedirectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PerfilUsu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PostsForumUsuario.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/MuralUsuario.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Perfil.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/MuralMedico.jsp" />
@@ -122,7 +116,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Perfil.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
       </list>
     </option>
   </component>
@@ -140,8 +139,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="1920" />
+    <option name="y" value="345" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -160,6 +161,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,7 +408,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1015,15 +1016,16 @@
       <workItem from="1498564795914" duration="1861000" />
       <workItem from="1498574573299" duration="2327000" />
       <workItem from="1498592354254" duration="1421000" />
-      <workItem from="1498656675402" duration="792000" />
+      <workItem from="1498656675402" duration="803000" />
+      <workItem from="1498660835291" duration="2715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91333000" />
+    <option name="totallyTimeSpent" value="94059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="1920" y="345" width="1366" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1046,10 +1048,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33193278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23278688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20437567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1368,22 +1370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="80" column="45" lean-forward="false" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="68" column="40" lean-forward="false" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/PostsForumUsuario.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1396,30 +1382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="88" column="14" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="88" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1560,13 +1522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1575,21 +1530,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BD.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="83" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="200" column="76" lean-forward="false" selection-start-line="200" selection-start-column="76" selection-end-line="200" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="144" column="52" lean-forward="false" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+        <state relative-caret-position="285">
+          <caret line="203" column="76" lean-forward="false" selection-start-line="203" selection-start-column="76" selection-end-line="203" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1171">
+          <caret line="190" column="29" lean-forward="true" selection-start-line="190" selection-start-column="29" selection-end-line="190" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="164" column="127" lean-forward="false" selection-start-line="164" selection-start-column="127" selection-end-line="164" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="170" column="123" lean-forward="false" selection-start-line="170" selection-start-column="123" selection-end-line="170" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="177" column="123" lean-forward="false" selection-start-line="177" selection-start-column="123" selection-end-line="177" selection-end-column="123" />
+          <folding />
         </state>
       </provider>
     </entry>

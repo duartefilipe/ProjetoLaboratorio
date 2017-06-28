@@ -168,7 +168,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" >Destinatario:</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
+                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-default" id="enviar">Enviar</button>
+                            <button type="submit" class="btn btn-success" id="enviar">Enviar</button>
                         </div>
                     </div>
 
