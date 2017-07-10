@@ -27,6 +27,8 @@
 <jsp:useBean id="logposts" class="br.csi.dao.ForumMedicoDao" />
 <c:set var="postsForum" value="${logposts.getPostsForumMedico()}" />
 
+<c:if  test="${sessionScope['usuario'] != null}">
+
 <div id="wrapper">
 
     <!-- Sidebar -->
@@ -138,6 +140,13 @@
 <script src="resources/js/morris/chart-data-morris.js"></script>
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
+
+</c:if>
+
+<c:if  test="${sessionScope['usuario'] == null}">
+    <% response.sendRedirect("Login");  %>
+</c:if>
+
 
 </body>
 </html>

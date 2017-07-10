@@ -25,10 +25,11 @@
     <jsp:useBean id="logpostsforum2" class="br.csi.dao.ForumMedicoDao" />
     <c:set var="respsForum" value="${logpostsforum2.getPostsForum2(forum.id)}" />
 
+    <c:if  test="${sessionScope['usuario'] != null}">
+
     <div id="wrapper">
 
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -51,7 +52,6 @@
                     <li class="dropdown user-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${usuario.nome} ${usuario.sobrenome} <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <!--    <li><a href="RedAlteraUsu?id=${usuarios.id}"><i class="fa fa-user"></i> Perfil </a></li> -->
                             <li><a href="RedPerfilAlteraUsu?id=${usuario.id}"><i class="fa fa-user"></i>  Perfil </a></li> <!-- ?id=${usuario.id}" -->
                             <li><a href="RedMuralUsuario"><i class="fa fa-book"></i> Anuncios </a></li>
                             <li><a href="RedPostsForumUsuario"><i class="fa fa-inbox"></i> Posts no Forum </a></li>
@@ -135,6 +135,12 @@
     <script src="resources/js/morris/chart-data-morris.js"></script>
     <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
     <script src="resources/js/tablesorter/tables.js"></script>
+
+    </c:if>
+
+    <c:if  test="${sessionScope['usuario'] == null}">
+        <% response.sendRedirect("Login");  %>
+    </c:if>
 
     </body>
     </html>

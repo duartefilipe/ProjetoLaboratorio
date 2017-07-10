@@ -20,6 +20,8 @@
 
 	<c:out value="${requestScope.usuario}" />
 
+<c:if  test="${sessionScope['usuario'] != null}">
+
         <div id="wrapper">
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -129,6 +131,12 @@
 <script src="resources/js/morris/chart-data-morris.js"></script>
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
+
+</c:if>
+
+    <c:if  test="${sessionScope['usuario'] == null}">
+        <% response.sendRedirect("Login");  %>
+    </c:if>
 
 </body>
 </html>

@@ -25,6 +25,8 @@
 
 <jsp:useBean id="logforumusu" class="br.csi.dao.ForumMedicoDao" />
 <c:set var="postsforum" value="${logforumusu.getPostsForumUsuario5(usuario.id)}" />
+<c:if  test="${sessionScope['usuario'] != null}">
+
 
 <div id="wrapper">
 
@@ -160,6 +162,11 @@
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
 
+</c:if>
+
+<c:if  test="${sessionScope['usuario'] == null}">
+    <% response.sendRedirect("Login");  %>
+</c:if>
 
 </body>
 </html>

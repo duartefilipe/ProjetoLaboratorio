@@ -22,6 +22,8 @@
 <jsp:useBean id="log2" class="br.csi.dao.MuralDao" />
 <c:set var="posts" value="${log2.getPostsMural()}" />
 
+<c:if  test="${sessionScope['usuario'] != null}">
+
 <div id="wrapper">
 
     <!-- Sidebar -->
@@ -168,7 +170,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" >Destinatario:</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
+                            <input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
                         </div>
                     </div>
 
@@ -202,6 +204,12 @@
         </div>
     </div>
 </div>
+
+</c:if>
+
+<c:if  test="${sessionScope['usuario'] == null}">
+    <% response.sendRedirect("Login");  %>
+</c:if>
 
 </body>
 </html>

@@ -27,6 +27,8 @@
 <jsp:useBean id="log4" class="br.csi.dao.MuralDao" />
 <c:set var="posts" value="${log4.getPostsMural2(usuario.id)}" />
 
+<c:if  test="${sessionScope['usuario'] != null}">
+
 <div id="wrapper">
 
     <!-- Sidebar -->
@@ -268,5 +270,12 @@
 <script>
     document.write('<script src="//' + location.host.split(':')[0] + ':35729/livereload.js" async defer><' + '/script>');
 </script>
+
+</c:if>
+
+<c:if  test="${sessionScope['usuario'] == null}">
+    <% response.sendRedirect("Login");  %>
+</c:if>
+
 </body>
 </html>

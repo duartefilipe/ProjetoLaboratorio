@@ -38,16 +38,13 @@ public class UsuarioController {
 					rq.getSession().invalidate();
 					sessao = rq.getSession();
 					sessao.setAttribute("usuario", u);
-					//chama um metodo lista todos favoritos
-					//id do usuario u.getID
-				//	UsuarioDao usuarioDao = new UsuarioDao();
-				//	usuarioDao
-					
+
 	                return "medico/Medico";
 				}
 				else{
-				//	rq.getSession().invalidate();
-			        rq.getSession().setAttribute("usuario", u);
+					rq.getSession().invalidate();
+					sessao = rq.getSession();
+			        sessao.setAttribute("usuario", u);
 					return "usuario/Usuario";
 				}
 				

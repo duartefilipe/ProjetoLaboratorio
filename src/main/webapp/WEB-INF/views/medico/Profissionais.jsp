@@ -32,7 +32,7 @@
 	<c:out value="${requestScope.usuario}" />
 
 
-
+<c:if  test="${sessionScope['usuario'] != null}">
 
 
 	<div id="wrapper">
@@ -183,7 +183,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-2" >Destinatario:</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" name="email" id="emailDest" value="emailDest" disabled>
+								<input type="email" class="form-control" name="email" id="emailDest" value="emailDest">
 							</div>
 						</div>
 
@@ -273,6 +273,13 @@
 	<script src="resources/js/morris/chart-data-morris.js"></script>
 	<script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 	<script src="resources/js/tablesorter/tables.js"></script>
+
+</c:if>
+
+	<c:if  test="${sessionScope['usuario'] == null}">
+		<% response.sendRedirect("Login");  %>
+	</c:if>
+
 
 </body>
 </html>
