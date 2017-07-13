@@ -22,7 +22,9 @@
 <jsp:useBean id="log2" class="br.csi.dao.MuralDao" />
 <c:set var="posts" value="${log2.getPostsMural()}" />
 
-<c:if  test="${sessionScope['usuario'] != null}">
+<c:if  test="${usuario != null}">
+
+    <c:if  test="${usuario.tipo == 'outro'}">
 
 <div id="wrapper">
 
@@ -205,10 +207,17 @@
     </div>
 </div>
 
+    </c:if>
+    <c:if  test="${usuario.tipo != 'outro'}">
+        <% response.sendRedirect("logout");  %>
+    </c:if>
 </c:if>
 
 <c:if  test="${sessionScope['usuario'] == null}">
-    <% response.sendRedirect("Login");  %>
+    <%
+        response.sendRedirect("logout");
+
+    %>
 </c:if>
 
 </body>

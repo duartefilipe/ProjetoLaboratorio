@@ -32,8 +32,7 @@ public class UsuarioController {
 			u = uD.autenticar(login, senha);
 			
 			if(u != null){
-				System.out.println(" vai pagina usuario");
-				
+
 				if(u.getTipo().equals("medico")){
 					rq.getSession().invalidate();
 					sessao = rq.getSession();

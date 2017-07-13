@@ -96,6 +96,7 @@
                             <h3>${postsForum.tituloForum}  </h3>
                             <hr>
                             <h4>${postsForum.textoForum}</h4>
+                            <p align="right">Autor: ${postsForum.nome}</p>
                             <p align="right"><a href="redRespForumGeral?id=${postsForum.id}" style="color: #001c71">Visualizar</a></p>
                         </div>
                     </c:forEach>
@@ -116,7 +117,7 @@
             <div class="modal-body">
                 <form action="CadastrarForumGeralMedico" method="post">
                     <input type="hidden" name="idusuario" value="${usuario.id}">
-                    <input type="hidden" name="tipo" value="usuario">
+                    <input type="hidden" name="tipo" value="geral">
                     <label>Titulo:</label>
                     <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
 

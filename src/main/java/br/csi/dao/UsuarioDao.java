@@ -10,6 +10,9 @@ import br.csi.model.Avaliacao;
 import br.csi.model.Usuario;
 import br.csi.util.Connect;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 public class UsuarioDao {
 
 	public Usuario autenticar(String login, String senha) throws ClassNotFoundException, SQLException {
@@ -171,24 +174,27 @@ public class UsuarioDao {
 
 
 
-	public ArrayList<Usuario> getUsuarios() throws ClassNotFoundException {
+	public ArrayList<Usuario> getUsuarios(int id) throws ClassNotFoundException {
 
 		ArrayList<Usuario> log = new ArrayList<Usuario>();
 		Connection con = Connect.getConexao();
 		Usuario usu;
 
+
 		try {
 			String sql = "select usuario.idusuario, cast(avg(nota) as numeric (3,1)) as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
-					"\tusuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
-					"      from usuario,  avaliacao\n" +
-					"        where avaliacao.idusurec = usuario.idusuario\n" +
-					"            group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
-					"            usuario.trabatual, usuario.trabant, usuario.email\n" +
-					"UNION\n" +
+					"usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"from usuario,  avaliacao\n" +
+					"where avaliacao.idusurec = usuario.idusuario\n" +
+					"and idusuario != '"+id+"'\n" +
+					"group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,\n" +
+					"usuario.trabatual, usuario.trabant, usuario.email\n" +
 					"\n" +
+					"UNION\n" +
+					"\t\t\t\t\t\n" +
 					"select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,\n" +
-					"\tusuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
-					"      from usuario  WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
+					"usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email\n" +
+					"from usuario  WHERE idusuario != '"+id+"' and not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)\n" +
 					"ORDER BY sobrenome;";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();

@@ -20,7 +20,7 @@ create table avaliacao (idavaliacao serial not null primary key,
                           foreign key (idusurec) references usuario (idusuario));
 
 create table forummedico (idforummedico serial not null primary key,
-                         idusuario int, titulo text, texto text, tipo varchar(50),
+                         idusuario int, titulo text, texto text,
                          foreign key (idusuario) references usuario (idusuario));
 
 create table comentarioforummedico (idcomentarioforummedico serial not null primary key,
@@ -52,20 +52,20 @@ group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuar
   usuario.trabatual, usuario.trabant, usuario.email
 
 
-select usuario.idusuario, AVG(nota) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
+select usuario.idusuario, cast(avg(nota) as numeric (3,1)) as media, usuario.nome, usuario.sobrenome, usuario.tipo,
   usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
-    from usuario, usuario as u2, avaliacao
-      where usuario.idusuario = avaliacao.idusuatrib
-        and avaliacao.idusurec = u2.idusuario
-          group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
-          usuario.trabatual, usuario.trabant, usuario.email
+from usuario,  avaliacao
+where avaliacao.idusurec = usuario.idusuario
+      and idusuario != 33
+group by usuario.idusuario, usuario.nome, usuario.sobrenome, usuario.tipo, usuario.cidade,
+  usuario.trabatual, usuario.trabant, usuario.email
+
 UNION
 
 select usuario.idusuario, NULL as media, usuario.nome, usuario.sobrenome, usuario.tipo,
   usuario.cidade, usuario.trabatual, usuario.trabant, usuario.email
-    from usuario
-      WHERE not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)
-        ORDER BY sobrenome;
+from usuario  WHERE idusuario != 33 and not exists (select * from avaliacao where avaliacao.idusurec = usuario.idusuario)
+ORDER BY sobrenome;
 
 
 

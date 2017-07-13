@@ -8,6 +8,15 @@ public class ComentarioMedico {
 	private String textocomentario;
 	private String comentarioforummedico;
 	private int idpostforummedico;
+	private String nomecomentario;
+
+	public String getNomecomentario() {
+		return nomecomentario;
+	}
+
+	public void setNomecomentario(String nomecomentario) {
+		this.nomecomentario = nomecomentario;
+	}
 
 	public int getIdcomentarioforummedico() {
 		return idcomentarioforummedico;

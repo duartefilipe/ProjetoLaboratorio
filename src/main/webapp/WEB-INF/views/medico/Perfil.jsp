@@ -20,7 +20,9 @@
 
 	<c:out value="${requestScope.usuario}" />
 
-<c:if  test="${sessionScope['usuario'] != null}">
+<c:if  test="${usuario != null}">
+
+    <c:if  test="${usuario.tipo == 'medico'}">
 
         <div id="wrapper">
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -130,10 +132,17 @@
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
 
+    </c:if>
+    <c:if  test="${usuario.tipo != 'medico'}">
+        <% response.sendRedirect("logout");  %>
+    </c:if>
 </c:if>
 
     <c:if  test="${sessionScope['usuario'] == null}">
-        <% response.sendRedirect("Login");  %>
+        <%
+            response.sendRedirect("logout");
+
+        %>
     </c:if>
 
 

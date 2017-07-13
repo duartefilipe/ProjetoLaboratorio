@@ -6,6 +6,15 @@ public class ForumMedico {
 	private String textoForum;
 	private String tituloForum;
 	private String tipo;
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public String getTipo() {
 		return tipo;

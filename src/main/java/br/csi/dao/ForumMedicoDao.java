@@ -23,12 +23,12 @@ public class ForumMedicoDao {
 
 		try {
 			c = Connect.getConexao();
-			String sql="INSERT INTO forummedico (idusuario, titulo, texto, tipo) values(?,?,?,?)";
+			String sql="INSERT INTO forummedico (idusuario, titulo, texto, tipoforum) values(?,?,?,?)";
 			stmt = c.prepareStatement(sql);
 			stmt.setInt(1, fm.getIdusuario());
 			stmt.setString(2, fm.getTituloForum());
 			stmt.setString(3,fm.getTextoForum());
-			stmt.setString(4, fm.getTipo());
+			stmt.setString(4,fm.getTipo());
 			stmt.execute();
 			stmt.close();
 			retorno = true;
@@ -76,7 +76,11 @@ public class ForumMedicoDao {
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico where tipo = 'medico' ORDER BY idforummedico DESC";
+			String sql = "SELECT idforummedico, usuario.idusuario, nome, titulo, texto, usuario.tipo \n" +
+					"\tFROM forummedico, usuario\n" +
+					"\t\twhere usuario.idusuario = forummedico.idusuario\n" +
+					"    \t\tand usuario.tipo = 'medico'\n" +
+					"\t\t\t\tORDER BY idforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 
@@ -84,6 +88,7 @@ public class ForumMedicoDao {
 				fm = new ForumMedico();
 				fm.setId(rs.getInt("idforummedico"));
 				fm.setIdusuario(rs.getInt("idusuario"));
+				fm.setNome(rs.getString("nome"));
 				fm.setTituloForum(rs.getString("titulo"));
 				fm.setTextoForum(rs.getString("texto"));
 				logposts.add(fm);
@@ -107,7 +112,11 @@ public class ForumMedicoDao {
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico where tipo = 'usuario' ORDER BY idforummedico DESC";
+			//String sql = "SELECT * FROM forummedico where tipo = 'usuario' ORDER BY idforummedico DESC";
+			String sql = "SELECT idforummedico, usuario.idusuario, usuario.nome as nome, titulo, texto FROM forummedico, usuario \n" +
+					"\twhere usuario.idusuario = forummedico.idusuario\n" +
+					"    \tand tipoforum = 'geral'\n" +
+					"\t\t\tORDER BY idforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 
@@ -115,6 +124,7 @@ public class ForumMedicoDao {
 				fm = new ForumMedico();
 				fm.setId(rs.getInt("idforummedico"));
 				fm.setIdusuario(rs.getInt("idusuario"));
+				fm.setNome(rs.getString("nome"));
 				fm.setTituloForum(rs.getString("titulo"));
 				fm.setTextoForum(rs.getString("texto"));
 				logpostsgeral.add(fm);
@@ -134,7 +144,7 @@ public class ForumMedicoDao {
 
 		try {
 			//String sql = "SELECT * FROM comentarioforummedico where comentarioforummedico = '"+id+"' ORDER BY idpostforummedico DESC ";
-			String sql = "select idpostforummedico, idcomentarioforummedico, usuario.idusuario as idusuario, titulo, texto, comentario \n" +
+			String sql = "select idpostforummedico, idcomentarioforummedico, usuario.nome as nome, usuario.idusuario as idusuario, titulo, texto, comentario \n" +
 					"\tfrom comentarioforummedico, usuario, forummedico \n" +
 					"\t\twhere comentarioforummedico.idusuario = usuario.idusuario\n" +
 					"        \tand comentarioforummedico.idpostforummedico = forummedico.idforummedico\n" +
@@ -153,6 +163,9 @@ public class ForumMedicoDao {
 
 				cfm.setIdusuario(rs.getInt("idusuario"));
 				System.out.println("id do usuario que comentou: "+cfm.getIdusuario());
+
+				cfm.setNomecomentario(rs.getString("nome"));
+				System.out.println("nome do post comentado: "+cfm.getNomecomentario());
 
 				cfm.setTitulocomentario(rs.getString("titulo"));
 				System.out.println("titulo do post comentado: "+cfm.getTitulocomentario());

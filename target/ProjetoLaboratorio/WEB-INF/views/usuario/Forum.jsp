@@ -22,7 +22,9 @@
     <jsp:useBean id="logpostsgeral" class="br.csi.dao.ForumMedicoDao" />
     <c:set var="postsForum" value="${logpostsgeral.getPostsForumGeral()}" />
 
-<c:if  test="${sessionScope['usuario'] != null}">
+<c:if  test="${usuario != null}">
+
+    <c:if  test="${usuario.tipo == 'outro'}">
 
         <div id="wrapper">
 
@@ -86,6 +88,7 @@
                             <h3>${postsForum.tituloForum}  </h3>
                             <hr>
                             <h4>${postsForum.textoForum}</h4>
+                            <p align="right">Autor: ${postsForum.nome}</p>
                             <p align="right"><a href="redRespForumUsu?id=${postsForum.id}" style="color: #001c71">Visualizar</a></p>
                         </div>
                     </c:forEach>
@@ -106,7 +109,7 @@
                 <div class="modal-body">
                     <form action="CadastrarForumGeralUsuario" method="post">
                         <input type="hidden" name="idusuario" value="${usuario.id}">
-                        <input type="hidden" name="tipo" value="usuario">
+                        <input type="hidden" name="tipo" value="geral">
                         <label>Titulo:</label>
                         <input type="text" class="form-control" name="tituloForum" placeholder="titulo">
 
@@ -133,10 +136,17 @@
 <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 <script src="resources/js/tablesorter/tables.js"></script>
 
+    </c:if>
+    <c:if  test="${usuario.tipo != 'outro'}">
+        <% response.sendRedirect("logout");  %>
+    </c:if>
 </c:if>
 
     <c:if  test="${sessionScope['usuario'] == null}">
-        <% response.sendRedirect("Login");  %>
+        <%
+            response.sendRedirect("logout");
+
+        %>
     </c:if>
 
 </body>

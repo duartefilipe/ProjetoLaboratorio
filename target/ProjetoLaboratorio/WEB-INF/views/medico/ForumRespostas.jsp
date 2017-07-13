@@ -25,7 +25,9 @@
     <jsp:useBean id="logpostsforum2" class="br.csi.dao.ForumMedicoDao" />
     <c:set var="respsForum" value="${logpostsforum2.getPostsForum2(forum.id)}" />
 
-    <c:if  test="${sessionScope['usuario'] != null}">
+    <c:if  test="${usuario != null}">
+
+        <c:if  test="${usuario.tipo == 'medico'}">
 
     <div id="wrapper">
 
@@ -99,7 +101,9 @@
                                 <div class="container-fluid text-right">
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
                                     <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
-                                    <p>${respsForum.comentarioforummedico}  </p>
+                                    <p><b>${respsForum.comentarioforummedico}  </b></p>
+                                    <p>Autor: ${respsForum.nomecomentario}  </p>
+
                                     <hr>
                                 </div>
                             </c:forEach>
@@ -148,6 +152,7 @@
                 <div class="modal-body">
                     <form action="CadastrarComentForumMedico" method="post">
                         <input type="hidden" name="idusuario" value="${usuario.id}">
+
                         <input type="hidden" name="idpostforummedico" value="${forum.id}">
 
                         <label>Comentario:</label>
@@ -171,10 +176,17 @@
     <script src="resources/js/morris/chart-data-morris.js"></script>
     <script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
     <script src="resources/js/tablesorter/tables.js"></script>
+        </c:if>
+        <c:if  test="${usuario.tipo != 'medico'}">
+            <% response.sendRedirect("logout");  %>
+        </c:if>
     </c:if>
 
     <c:if  test="${sessionScope['usuario'] == null}">
-        <% response.sendRedirect("Login");  %>
+        <%
+            response.sendRedirect("logout");
+
+        %>
     </c:if>
 
     </body>

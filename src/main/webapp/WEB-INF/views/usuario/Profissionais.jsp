@@ -25,13 +25,15 @@
 </head>
 
 <body>
-	<jsp:useBean id="log" class="br.csi.dao.UsuarioDao" />
-	<c:set var="usuarios" value="${log.getUsuarios()}" />
+		<jsp:useBean id="log" class="br.csi.dao.UsuarioDao" />
+		<c:set var="usuarios" value="${log.getUsuarios(usuario.id)}" />
 
 	<c:out value="${requestScope.usuario}" />
 
 
-<c:if  test="${sessionScope['usuario'] != null}">
+<c:if  test="${usuario != null}">
+
+	<c:if  test="${usuario.tipo == 'outro'}">
 
 	
 	<div id="wrapper">
@@ -255,11 +257,17 @@
 	<script src="resources/js/tablesorter/jquery.tablesorter.js"></script>
 	<script src="resources/js/tablesorter/tables.js"></script>
 
+	</c:if>
+	<c:if  test="${usuario.tipo != 'outro'}">
+		<% response.sendRedirect("logout");  %>
+	</c:if>
 </c:if>
 
 	<c:if  test="${sessionScope['usuario'] == null}">
-		<% response.sendRedirect("Login");  %>
-	</c:if>
+		<%
+			response.sendRedirect("logout");
 
+		%>
+	</c:if>
 </body>
 </html>
