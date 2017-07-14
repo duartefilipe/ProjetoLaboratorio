@@ -79,7 +79,7 @@ public class ForumMedicoDao {
 			String sql = "SELECT idforummedico, usuario.idusuario, nome, titulo, texto, usuario.tipo \n" +
 					"\tFROM forummedico, usuario\n" +
 					"\t\twhere usuario.idusuario = forummedico.idusuario\n" +
-					"    \t\tand usuario.tipo = 'medico'\n" +
+					"\t\t\tand tipoforum = 'medico'\n" +
 					"\t\t\t\tORDER BY idforummedico DESC";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
@@ -193,7 +193,7 @@ public class ForumMedicoDao {
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipo = 'medico' ORDER BY idforummedico DESC ";
+			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipoforum = 'medico' ORDER BY idforummedico DESC ";
 
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
@@ -222,7 +222,7 @@ public class ForumMedicoDao {
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipo = 'usuario' ORDER BY idforummedico DESC ";
+			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipoforum = 'geral' ORDER BY idforummedico DESC ";
 
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
@@ -251,7 +251,7 @@ public class ForumMedicoDao {
 		ForumMedico fm = null;
 
 		try {
-			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipo = 'usuario' ORDER BY idforummedico DESC ";
+			String sql = "SELECT * FROM forummedico where idusuario = '"+id+"' and tipoforum = 'geral' ORDER BY idforummedico DESC ";
 
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
@@ -279,7 +279,7 @@ public class ForumMedicoDao {
 		PreparedStatement stmt = null;
 
 		c = Connect.getConexao();
-		String sql=" delete from forummedico where idforummedico=?";
+		String sql= "delete from forummedico where idforummedico=?";
 
 		stmt = c.prepareStatement(sql);
 		stmt.setInt(1,id);
