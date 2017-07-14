@@ -92,6 +92,7 @@
                                     <input type="hidden" name="idusuario" value="${respsForum.idusuario }">
                                     <!-- <p align="right"><a href="#"><i style="color: #000000;" class="fa fa-close"></i></a></p> <h3>${postsForum.tituloForum}  </h3> -->
                                     <h3>${respsForum.comentarioforummedico}  </h3>
+                                    <p align="right">Autor: ${respsForum.nomecomentario}</p>
                                     <hr>
                                 </div>
                             </c:forEach>

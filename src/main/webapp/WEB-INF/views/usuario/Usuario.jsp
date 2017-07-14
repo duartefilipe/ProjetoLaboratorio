@@ -141,6 +141,7 @@
                             </p>
                             <hr>
                             <p>${posts.texto} ...</p>
+                            <p align="right">Autor: ${posts.nome}</p>
                         </div>
 
                     </c:forEach>

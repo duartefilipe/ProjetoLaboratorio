@@ -69,7 +69,7 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="RedForum">Médicos</a></li>
-							<li><a href="RedForumGeralRedForumGeral">Geral</a></li>
+							<li><a href="RedForumGeral">Geral</a></li>
 						</ul></li>
 				</ul>
 

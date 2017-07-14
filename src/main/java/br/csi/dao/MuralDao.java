@@ -98,13 +98,17 @@ public class MuralDao {
         Mural m = null;
 
         try {
-            String sql = "SELECT idmural, idusuario, titulo, substring(texto, 1, 100) as texto FROM mural ORDER BY idmural DESC LIMIT 2";
+            String sql = "SELECT idmural, usuario.idusuario, nome, titulo, substring(texto, 1, 100) as texto \n" +
+                    "\tFROM mural, usuario\n" +
+                    "    \twhere usuario.idusuario = mural.idusuario\n" +
+                    "    \t\tORDER BY idmural DESC LIMIT 2";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
                 m = new Mural();
                 m.setIdUsuario(rs.getInt("idusuario"));
+                m.setNome(rs.getString("nome"));
                 m.setTitulo(rs.getString("titulo"));
                 m.setTexto(rs.getString("texto"));
                 log3.add(m);

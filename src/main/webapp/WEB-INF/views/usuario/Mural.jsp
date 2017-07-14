@@ -95,6 +95,7 @@
                         </p>
                         <hr>
                         <p> ${posts.texto}.</p>
+                        <p align="right">Autor: ${posts.nome}</p>
                         <hr>
                         <div class="container">
                             <div class="row text-right">
