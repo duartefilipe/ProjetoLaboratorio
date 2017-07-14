@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846b3816-5c93-462c-ae90-a2ddca16c945" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,67 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ForumController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/controller/ForumController.java">
+      <file leaf-file-name="Mural.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForumMedicoDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="82" column="56" lean-forward="false" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
-              <folding>
-                <marker date="1500000269971" expanded="true" signature="769:846" ph="INSERT INTO forummedico... " />
-                <marker date="1500000269971" expanded="true" signature="1483:1576" ph="insert into comentarioforummedico... " />
-                <marker date="1500000269971" expanded="true" signature="2411:2677" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="3736:3812" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="3832:3946" ph="SELECT idfor... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="3832:4082" ph="SELECT idfor... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="5002:5446" ph="select idpos... comentarioforummedico" />
-                <marker date="1500000269971" expanded="true" signature="7014:7119" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="7828:7932" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="8643:8747" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="8649:8747" ph="SELECT * FRO... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="9394:9439" ph="delete from " />
-                <marker date="1500000269971" expanded="true" signature="9776:9974" ph="DELETE FROM " />
-                <marker date="1500000269971" expanded="true" signature="10286:10333" ph="select * fro... forummedico" />
-                <marker date="1500000269971" expanded="true" signature="10977:11039" ph="UPDATE forum... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Forum.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForumGeral.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostsForumMedico.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/PostsForumMedico.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state relative-caret-position="133">
+              <caret line="105" column="51" lean-forward="false" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -160,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/UsuarioDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/model/ComentarioMedico.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/model/ForumMedico.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp" />
@@ -168,13 +111,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Forum.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostasGeral.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/ForumRespostas.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/MuralDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Usuario.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Medico.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Profissionais.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp" />
       </list>
     </option>
   </component>
@@ -1112,12 +1056,12 @@
       <workItem from="1499705581977" duration="4955000" />
       <workItem from="1499966881519" duration="13441000" />
       <workItem from="1499994248778" duration="2387000" />
-      <workItem from="1499999062731" duration="1506000" />
+      <workItem from="1499999062731" duration="1775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127709000" />
+    <option name="totallyTimeSpent" value="127978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -1431,14 +1375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumRespostas.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="976">
@@ -1492,14 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="94" column="87" lean-forward="false" selection-start-line="94" selection-start-column="87" selection-end-line="94" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="97" column="60" lean-forward="false" selection-start-line="97" selection-start-column="60" selection-end-line="97" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1567,22 +1495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/csi/dao/ForumMedicoDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1604,6 +1516,38 @@
             <marker date="1500000269971" expanded="true" signature="10286:10333" ph="select * fro... forummedico" />
             <marker date="1500000269971" expanded="true" signature="10977:11039" ph="UPDATE forum... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Forum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/ForumGeral.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usuario/Mural.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="99" column="51" lean-forward="false" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/medico/Mural.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="105" column="51" lean-forward="false" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -97,7 +97,7 @@
                         <p> ${posts.texto}.</p>
                         <p align="right">Autor: ${posts.nome}</p>
                         <hr>
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row text-right">
                                 <div class="btn btn-primary" data-toggle="modal" data-target="#modalemail"  onclick="setaDadosModal('${posts.email }', '${posts.nome }' , ${posts.idUsuario})"> Enviar Email </div>
                             </div>
