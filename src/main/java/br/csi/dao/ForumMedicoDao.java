@@ -21,8 +21,11 @@ public class ForumMedicoDao {
 		System.out.println("titulo do post do usuario: "+fm.getIdusuario());
 		System.out.println("texto do post do usuario: "+fm.getIdusuario());
 
+
+
 		try {
 			c = Connect.getConexao();
+
 			String sql="INSERT INTO forummedico (idusuario, titulo, texto, tipoforum) values(?,?,?,?)";
 			stmt = c.prepareStatement(sql);
 			stmt.setInt(1, fm.getIdusuario());

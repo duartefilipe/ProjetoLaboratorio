@@ -70,7 +70,7 @@
                 <div class="row">
                     <ol class="breadcrumb">
                         <li class="active" style="color: black">
-                            <i class="fa fa-caret-square-o-down"></i> Forum Medico
+                            <i class="fa fa-caret-square-o-down"></i> Forum
                         </li>
                     </ol>
                 </div>

@@ -24,7 +24,7 @@ create table forummedico (idforummedico serial not null primary key,
                          foreign key (idusuario) references usuario (idusuario));
 
 create table comentarioforummedico (idcomentarioforummedico serial not null primary key,
-                                   comentario text, idpostforummedico int, idusuario int,
+                                   comentario text, idpostforummedico int, idusuario int, tipoforum varchar(30),
                                    foreign key (idusuario) references usuario(idusuario),
                                    foreign key (idpostforummedico) references forummedico (idforummedico));
 
